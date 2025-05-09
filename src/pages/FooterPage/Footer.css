@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    #social-media h1 {
+      font-size: 5vw; /* Adjust based on viewport width */
+    }
+    #icon-container{
+        width: 100%;
+        justify-content: space-around; }
+
+        #icon{
+            padding: 12px;
+        }
+  }
