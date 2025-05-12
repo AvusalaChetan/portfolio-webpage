@@ -39,7 +39,7 @@ const languages = [
   {
     name: "C-language",
     icon: <img src={c} alt="C" className="w-10 h-10" />,
-    certificate: "/src/assets/C-Lang.pdf",
+    certificate: "https://coursera.org/share/b436562c58d98767d6f07e2fc48b786c",
   },
 ];
 
