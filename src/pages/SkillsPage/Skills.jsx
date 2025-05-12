@@ -39,7 +39,7 @@ const languages = [
   {
     name: "C-language",
     icon: <img src={c} alt="C" className="w-10 h-10" />,
-    certificate: "/src/images/C-Lang.pdf",
+    certificate: "/src/assets/C-Lang.pdf",
   },
 ];
 
