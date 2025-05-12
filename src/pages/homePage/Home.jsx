@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import Wave from "react-wavify";
 import TypingEffect from "../../effects/TypingEffect";
 import "./Home.css";
-import profilePhoto from "../../images/profile-photo.jpg";
-
 // Animations
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -135,11 +133,11 @@ const Home = () => {
         id="img-container"
         className="w-[350px] h-[350px] bg-gray-800 rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300"
       >
-       <img
-  src={profilePhoto}
-  alt="photo"
-  className="rounded-lg object-cover w-full h-full"
-/>
+        <img
+          src="/src/images/profile-photo.jpg"
+          alt="photo"
+          className="rounded-lg object-cover w-full h-full"
+        />
       </motion.div>
     </div>
   );
