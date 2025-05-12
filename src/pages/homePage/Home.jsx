@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Wave from "react-wavify";
 import TypingEffect from "../../effects/TypingEffect";
-import "./Home.css"
+import "./Home.css";
+import profilePhoto from "../../images/profile-photo.jpg";
+
 // Animations
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -61,7 +63,6 @@ const Home = () => {
         animate="visible"
         className="flex flex-col justify-center gap-6 "
         id="content"
-        
       >
         <motion.p
           variants={fadeInUp}
@@ -78,10 +79,10 @@ const Home = () => {
         </motion.h1>
 
         <motion.hr
-initial={{opacity:0,width:0}}
-animate={{opacity:1,width:220}}
-transition={{duration:1.5,delay:1,ease:'easeInOut'}}
-className="h-[0.3rem] mt-2 bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8860b] rounded-lg border-none"
+          initial={{ opacity: 0, width: 0 }}
+          animate={{ opacity: 1, width: 220 }}
+          transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
+          className="h-[0.3rem] mt-2 bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8860b] rounded-lg border-none"
           style={{ width: 210 }}
           id="hr-Home"
         />
@@ -93,7 +94,10 @@ className="h-[0.3rem] mt-2 bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8
           A Fullstack Developer
         </motion.h3>
 
-        <motion.h2 variants={fadeInUp} className="text-lg md:text-xl text-gray-300">
+        <motion.h2
+          variants={fadeInUp}
+          className="text-lg md:text-xl text-gray-300"
+        >
           <TypingEffect typingText={typingText} />
         </motion.h2>
 
@@ -131,11 +135,11 @@ className="h-[0.3rem] mt-2 bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8
         id="img-container"
         className="w-[350px] h-[350px] bg-gray-800 rounded-xl shadow-lg flex items-center justify-center overflow-hidden hover:scale-105 transition-transform duration-300"
       >
-        <img
-          src="/src/images/profile-photo.jpg"
-          alt="photo"
-          className="rounded-lg object-cover w-full h-full"
-        />
+       <img
+  src={profilePhoto}
+  alt="photo"
+  className="rounded-lg object-cover w-full h-full"
+/>
       </motion.div>
     </div>
   );
