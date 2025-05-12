@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cursor from "./components/cursor";
+import Cursor from "./components/Cursor";
 import Loading from "./components/Loading";
 import "./App.css";
 import { motion, AnimatePresence } from "motion/react";
