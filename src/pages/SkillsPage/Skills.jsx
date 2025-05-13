@@ -13,6 +13,7 @@ import python from "../../assets/python-5.svg";
 import c from "../../assets/c-1.svg";
 import { motion } from "framer-motion";
 
+
 const languages = [
   {
     name: "HTML",
@@ -39,8 +40,7 @@ const languages = [
   {
     name: "C-language",
     icon: <img src={c} alt="C" className="w-10 h-10" />,
-    certificate: "https://coursera.org/share/b436562c58d98767d6f07e2fc48b786c",
-  },
+    certificate: "/pdfs/C-Lang.pdf"  },
 ];
 
 const frameworks = [
