@@ -4,7 +4,7 @@ import Wave from "react-wavify";
 import TypingEffect from "../../effects/TypingEffect";
 import "./Home.css";
 
-const profilePhoto = "/public/images/profile-photo.jpg"; // Updated path
+const profilePhoto = "/images/profile-photo.jpg"; 
 
 // Animations
 const containerVariant = {
