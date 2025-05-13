@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import './About.css'
+import profilePhoto from "../../assets/images/profile-photo.jpg";
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -32,7 +33,7 @@ const About = () => {
             className="flex-shrink-0 rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-lg"
           >
             <img
-              src="/src/images/profile-photo.jpg"
+              src={profilePhoto}
               alt="Profile"
               className="rounded-full w-48 h-48 md:w-64 md:h-64 object-cover shadow-lg"
             />
