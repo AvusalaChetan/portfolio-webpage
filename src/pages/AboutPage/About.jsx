@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import './About.css'
-import profilePhoto from "../../assets/images/profile-photo.jpg";
-
+const profilePhoto = "/images/profile-photo.jpg"; 
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
 

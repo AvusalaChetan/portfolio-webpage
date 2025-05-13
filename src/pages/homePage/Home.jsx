@@ -3,7 +3,9 @@ import { motion } from "framer-motion";
 import Wave from "react-wavify";
 import TypingEffect from "../../effects/TypingEffect";
 import "./Home.css";
-import profilePhoto from "../../assets/images/profile-photo.jpg";
+
+const profilePhoto = "/public/images/profile-photo.jpg"; // Updated path
+
 // Animations
 const containerVariant = {
   hidden: { opacity: 0 },
@@ -16,6 +18,7 @@ const containerVariant = {
     },
   },
 };
+
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },

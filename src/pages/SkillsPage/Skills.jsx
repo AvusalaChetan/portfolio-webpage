@@ -11,8 +11,7 @@ import {
 import { TbBrandFramerMotion } from "react-icons/tb";
 import python from "../../assets/python-5.svg";
 import c from "../../assets/c-1.svg";
-import { motion } from "motion/react";
-
+import { motion } from "framer-motion";
 
 const languages = [
   {
@@ -20,6 +19,7 @@ const languages = [
     icon: <FaHtml5 className="text-orange-500" />,
     certificate: "",
   },
+
   {
     name: "CSS",
     icon: <FaCss3Alt className="text-blue-500" />,
@@ -33,7 +33,7 @@ const languages = [
   {
     name: "Python",
     icon: <img src={python} alt="Python" className="w-10 h-10" />,
-    certificate: "/src/images/python.pdf",
+    certificate: "/pdfs/python.pdf",
 
   },
   {
@@ -138,13 +138,15 @@ const Skills = () => {
                   whileHover={{ scale: 1.1, rotate: -6, backdropFilter: "blur(103px)", boxShadow: "0px 4px 20px rgba(0, 255, 255, 0.5)" }}
                   transition={{ duration: 0.3 }}
                   onClick={() => {
-                    skill.certificate !== ""
-                      ? window.open(
+                    if (skill.certificate) {
+                      window.open(
                         skill.certificate,
                         "_blank",
                         "width=800,height=600,scrollbars=yes,resizable=yes"
-                      )
-                      : alert("learn from youtube ");
+                      );
+                    } else {
+                      alert("Certificate not available for this skill.");
+                    }
                   }}
                   key={index}
                   className="bg-gray-800 cursor-none rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center"
