@@ -1,6 +1,7 @@
 import React from "react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion"; // FIXED
 import "./Projects.css";
+
 const projects = [
   {
     title: "Portfolio Website",
@@ -17,15 +18,20 @@ const projects = [
     link: "https://darling-meringue-393b73.netlify.app/",
     img: "https://imgs.search.brave.com/rDo2nDQjeLWZuYvO8jEa8qKyog69P-9dECiMfflpmXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2JlLzQz/Lzc4L2JlNDM3ODEy/MmNhZDZmNjcxN2Fk/OGIyMjc2ZTAyZTUw/LmpwZw", // replace with your actual image path
   },
-  // {
-  //   title: "Flames App",
-  //   description:
-  //     "A weather app providing real-time data using an external API.",
-  //   techStack: ["HTML", "CSS", "JavaScript"],
-  //   link: "https://achetan.netlify.app/",
-  //   img: "/src/images/Flames.png",
-  // },
+  {
+    title: "Flames App",
+    description:
+      "A weather app providing real-time data using an external API.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    link: "https://achetan.netlify.app/",
+    img: "/images/Flames.png",
+  },
 ];
+
+const overlayVariants = {
+  initial: { opacity: 0 },
+  hover: { opacity: 1 },
+};
 
 const Projects = () => {
   return (
@@ -47,7 +53,8 @@ const Projects = () => {
             <motion.div
               id={`project-${index}`}
               key={index}
-              whileHover={{ scale: 1.05 }}
+              whileHover="hover"
+              initial="initial"
               className={`w-1/3 h-[35vh] p-2 m-3 relative overflow-hidden `}
               style={{
                 position: "relative",
@@ -70,9 +77,7 @@ const Projects = () => {
               <motion.div
                 id={`project-overlay-${index}`}
                 className="project-overlay flex items-center gap-2 flex-col absolute"
-                initial={{ opacity: 0 }}
-                whileHover={{ opacity: 1 }}
-                transition={{ duration: 0.3 }}
+                variants={overlayVariants}
                 style={{
                   position: "absolute",
                   top: 0,
@@ -85,7 +90,6 @@ const Projects = () => {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-
                 }}
               >
                 <h3
