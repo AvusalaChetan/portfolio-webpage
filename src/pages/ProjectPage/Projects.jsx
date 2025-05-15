@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion"; // FIXED
 import "./Projects.css";
 
@@ -34,6 +34,15 @@ const overlayVariants = {
 };
 
 const Projects = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <section id="projects-section">
       <div id="projects-container">
@@ -53,7 +62,7 @@ const Projects = () => {
             <motion.div
               id={`project-${index}`}
               key={index}
-              whileHover="hover"
+              whileHover={isMobile ? undefined : "hover"}
               initial="initial"
               className={`w-1/3 h-[35vh] p-2 m-3 relative overflow-hidden `}
               style={{
@@ -78,6 +87,7 @@ const Projects = () => {
                 id={`project-overlay-${index}`}
                 className="project-overlay flex items-center gap-2 flex-col absolute"
                 variants={overlayVariants}
+                animate={isMobile ? "hover" : undefined}
                 style={{
                   position: "absolute",
                   top: 0,
