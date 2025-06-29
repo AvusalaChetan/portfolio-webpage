@@ -64,7 +64,7 @@ const Projects = () => {
               key={index}
               whileHover={isMobile ? undefined : "hover"}
               initial="initial"
-              className={`w-1/3 h-[35vh] p-2 m-3 relative overflow-hidden `}
+              className={`project-card w-1/3 h-[35vh] p-2 m-3 relative overflow-hidden `}
               style={{
                 position: "relative",
                 borderRadius: "12px",

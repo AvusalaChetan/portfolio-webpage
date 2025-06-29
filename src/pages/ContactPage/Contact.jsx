@@ -86,6 +86,31 @@ const Contact = () => {
         />
       </div>
 
+      
+      {/*mobile number field  */}
+      <div>
+        <label
+          htmlFor="number"
+          className="block text-sm font-medium text-gray-300 mb-2"
+        >
+          mobile number
+        </label>
+        <input
+          id="number"
+          type="number"
+          name="number"
+          placeholder="Your number"
+          required
+          className="w-full p-3 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+        />
+        <ValidationError
+          prefix="number"
+          field="number"
+          errors={state.errors}
+          className="text-red-500 text-sm mt-1"
+        />
+      </div>
+
       {/* Message Field */}
       <div>
         <label

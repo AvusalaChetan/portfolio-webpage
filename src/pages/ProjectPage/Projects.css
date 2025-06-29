@@ -3,6 +3,10 @@
     transition: opacity 0.3s ease-in-out;
   }
   
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+  
   .project-overlay:hover {
     opacity: 1;
   }
