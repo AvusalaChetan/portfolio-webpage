@@ -33,27 +33,6 @@ This portfolio is designed to highlight my work as a developer, featuring:
 
 ---
 
-## ⚡ Getting Started
-1. **Clone the repo:**
-   ```bash
-   git clone https://github.com/your-username/portfolio-website.git
-   cd portfolio-website
-   ```
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
-4. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
----
-
 ## 📁 Folder Structure
 ```
 portfolio-website/
