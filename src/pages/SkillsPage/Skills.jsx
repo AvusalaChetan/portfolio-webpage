@@ -66,16 +66,16 @@ const frameworks = [
     icon: <TbBrandFramerMotion className="text-blue-400" />,
     certificate: "",
   },
-  // {
-  //   name: "Node.js",
-  //   icon: <FaNodeJs className="text-green-600" />,
-  //   certificate: "",
-  // },
-  // {
-  //   name: "Express.js",
-  //   icon: <SiExpress className="text-gray-500" />,
-  //   certificate: "",
-  // },
+  {
+     name: "Node.js",
+     icon: <FaNodeJs className="text-green-600" />,
+    certificate: "",
+  },
+   {
+    name: "Express.js",
+   icon: <SiExpress className="text-gray-500" />,
+    certificate: "",
+ },
 ];
 
 const tools = [
@@ -93,11 +93,11 @@ const whatCanIDo = [
     explanation:
       "Build responsive, interactive websites using HTML, CSS, JavaScript, and React.js.",
   },
-  // {
-  //   skill: "backend",
-  //   explanation:
-  //     "i can build basic of backend",
-  // },
+  {
+   skill: "backend",
+    explanation:
+      "i can build basic of backend",
+  },
 ];
 
 
