@@ -1,5 +1,6 @@
 import React from "react";
 import { FaReact, FaHtml5, FaCss3Alt, FaJs, FaNodeJs } from "react-icons/fa";
+import { SiMongodb } from "react-icons/si";
 import {
   SiTailwindcss,
   SiMongodb,
@@ -44,11 +45,28 @@ const languages = [
 ];
 
 const frameworks = [
+<SiMongodb />
+{
+    name: "MongoDB",
+    icon: <SiMongodb className="text-cyan-400" />,
+    certificate: "",
+  },
+{
+    name: "Express.js",
+   icon: <SiExpress className="text-gray-500" />,
+    certificate: "",
+ },
   {
     name: "React",
     icon: <FaReact className="text-cyan-400" />,
     certificate: "",
   },
+{
+     name: "Node.js",
+     icon: <FaNodeJs className="text-green-600" />,
+    certificate: "",
+  },
+
   // {
   //   name: "Next.js",
   //   icon: <img
@@ -66,16 +84,8 @@ const frameworks = [
     icon: <TbBrandFramerMotion className="text-blue-400" />,
     certificate: "",
   },
-  {
-     name: "Node.js",
-     icon: <FaNodeJs className="text-green-600" />,
-    certificate: "",
-  },
-   {
-    name: "Express.js",
-   icon: <SiExpress className="text-gray-500" />,
-    certificate: "",
- },
+  
+   
 ];
 
 const tools = [
