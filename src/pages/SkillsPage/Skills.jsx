@@ -44,7 +44,6 @@ const languages = [
 ];
 
 const frameworks = [
-<SiMongodb />
 {
     name: "MongoDB",
     icon: <SiMongodb className="text-cyan-400" />,
