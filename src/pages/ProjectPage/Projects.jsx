@@ -4,13 +4,6 @@ import "./Projects.css";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal portfolio to showcase my skills and projects.",
-    techStack: ["React", "Tailwind CSS", "Framer Motion"],
-    link: "#",
-    img: "https://imgs.search.brave.com/VqoUXWNOPZ3mErvo39eGyC6Nz9Alu9vMW_c8OSxi3D4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTMw/NDM3MTM0OC9waG90/by93ZWJzaXRlLWRp/YWdyYW0uanBnP3M9/NjEyeDYxMiZ3PTAm/az0yMCZjPTlFd0xs/YWp5NHI5YWtfbm1j/TGJpNjZ1czJ0ancz/NUJ6RGU5ZEFSQWNM/cjQ9",
-  },
-  {
     title: "Weather App",
     description:
       "A weather app providing real-time data using an external API.",
