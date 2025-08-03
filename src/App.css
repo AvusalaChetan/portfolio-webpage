@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+body, main{
+    margin: 0;
+    padding: 0;
+    /* cursor: none; */
+    scroll-behavior: smooth;
+ 
+}
+@media (max-width: 768px) {
+  
+#page-container{
+    width: 90%;
+    padding: 1px 10px;
+}
+
+
+}

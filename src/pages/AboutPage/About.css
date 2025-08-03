@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+/* Utility Classes */
+@layer utilities {
+  @media only screen and (max-width: 768px) {
+    .about-mobile-border {
+      border: 2px solid teal;
+      padding: 1rem;
+      border-radius: 8px;
+      background-color: #f0f8ff;
+    }
+  }
+}
+
+/* Mobile & Tablet Styles (up to 768px) */
+@media only screen and (max-width: 768px) {
+  /* Section container */
+  #container {
+    padding: 1rem;
+    border: 1px solid teal;
+    border-radius: 8px;
+    width: 100%;
+  }
+
+  /* Heading */
+  #heading {
+    font-size: 1.75rem;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+  }
+
+  /* Wrapper layout */
+  #wrapper {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+ 
+  /* Profile image */
+  #profile-img,
+  #profile-img img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* About text */
+  #about-text {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    text-align: justify;
+    color: #999999;
+    padding: 0.01rem; 
+  }
+
+  #about-text p {
+    display: block;
+  }
+
+  #paragraph-4 {
+    display: none; /* Hide the 4th paragraph on mobile */
+  }
+}
+
+/* Desktop Styles (above 768px) */
+@media only screen and (min-width: 769px) {
+  /* Section container */
+  #container {
+    padding: 2rem;
+    border: 2px solid teal;
+    border-radius: 12px;
+  }
+
+  /* Heading */
+  #heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px auto;
+  }
+
+  /* Wrapper layout */
+  #wrapper {
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  
+  /* Profile image */
+  #profile-img,
+  #profile-img img {
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* About text */
+  #about-text {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-align: left;
+    color: #d7d7d7;
+  }
+
+  #about-text p {
+    display: block;
+  }
+}
+

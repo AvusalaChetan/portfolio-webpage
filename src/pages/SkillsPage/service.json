@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Web Development",
+    "description": "I build fast, responsive, and modern websites using the MERN stack — combining clean UI design with efficient, secure full-stack development."
+  },
+  {
+    "title": "Backend Development",
+    "description": "I specialize in server-side rendering (SSR), authentication, CRUD operations, and building robust APIs. I also perform API testing using Postman, connect securely to cloud-based MongoDB, and manage databases efficiently."
+  },
+  {}
+
+]
