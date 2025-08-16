@@ -1,7 +1,6 @@
 import  { useState } from "react";
 import { motion } from "framer-motion";
 import TypingEffect from "../../effects/TypingEffect";
-import "./Home.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Animations
