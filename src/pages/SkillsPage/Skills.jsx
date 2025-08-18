@@ -7,7 +7,6 @@ import {
   SiRedux,
   SiGit,
   SiGithub,
-  SiPostman,
 } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import python from "../../assets/python-5.svg";
@@ -90,11 +89,6 @@ const tools = [
   {
     name: "GitHub",
     icon: <SiGithub className="text-black" />,
-    certificate: "",
-  },
-  {
-    name: "postman",
-    icon: <SiPostman className="text-orange-500 bg-white rounded-full" />,
     certificate: "",
   },
 ];
