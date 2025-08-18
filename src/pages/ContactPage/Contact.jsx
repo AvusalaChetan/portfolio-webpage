@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { motion } from "framer-motion";
 import GetTouch from "../../components/GetTouch";
@@ -6,7 +6,17 @@ import Commentform from "./Commentform";
 
 const Contact = () => {
   const [state, handleSubmit] = useForm("manonlln");
-  const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (state.succeeded) {
     return (
@@ -24,15 +34,16 @@ const Contact = () => {
 
   return (
     <div className="flex items-center justify-around gap-3.5">
-<div className="w-[45vw]">
-      <GetTouch/>
+      <div className={`${isMobile ? "w-[100vw]" : "w-[45vw]"}`}>
+        <GetTouch />
+      </div>
 
-</div>
-<div className="w-[45vw]">
-  <Commentform/>
-</div>
+      {!isMobile && (
+        <div className="w-[45vw]">
+          <Commentform />
+        </div>
+      )}
     </div>
-
   );
 };
 

@@ -1,7 +1,6 @@
 import  { useState } from "react";
 import { motion } from "framer-motion";
 import TypingEffect from "../../effects/TypingEffect";
-import "./Home.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 // Animations
@@ -16,8 +15,6 @@ const containerVariant = {
     },
   },
 };
-
-
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: {
@@ -55,10 +52,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="relative container w-[80vw] min-h-[100vh] m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
-      {/* Background Gradient and Blurred Shape */}
-      <div aria-hidden="true" className="absolute -z-10 top-0 left-0 w-full h-full bg-gradient-to-br from-[#1a2980] via-[#26d0ce] to-[#f3e5ab] opacity-60"></div>
-      <div aria-hidden="true" className="absolute -z-10 right-[-100px] bottom-[-100px] w-[300px] h-[300px] bg-purple-400 rounded-full blur-3xl opacity-30"></div>
+    <div className="relative container lg:w-[80vw] min-w-full min-h-full m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
       {/* Left Section */}
       <motion.div
         variants={containerVariant}
@@ -76,7 +70,7 @@ const Home = () => {
         >
           Hi, i am
         </motion.p>
-  <div className="">
+  <div className="  p-2">
             <h1 className="text-4xl md:text-5xl font-semibold">
               MERN STACK{" "}
               <span className="text-4xl md:text-5xl uppercase font-bold bg-gradient-to-r from-purple-500 to-pink-400 bg-clip-text text-transparent">
@@ -88,7 +82,7 @@ const Home = () => {
 
         <motion.hr
           initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: 220 }}
+          animate={{ opacity: 1, width: 580 }}
           transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
           className="h-[0.3rem] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8860b] rounded-lg border-none m-auto"
           style={{ width: 210 }}

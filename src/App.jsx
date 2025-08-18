@@ -39,17 +39,17 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
                 <div key="navbar">
                   <Navbar />
                 </div>
-              <div key="main-content" className="main-container w-[85%] mx-auto">
-                <div className="w-[80vw] m-auto "
+              <div key="main-content" className="main-container w-full max-w-[100vw] px-2 sm:px-4 mx-auto">
+                <div className="w-full lg:w-[80vw] md:m-auto  sm:border-0 rounded-md bg-opacity-80"
                   id="page-container"
                 >
-                  <div id="home">
+                  <div id="home" className="h-[80vh] sm:w-full lg:w-[80vw]  flex items-center justify-center" >
                     <Home />
                   </div>
-                  <div id="about">
+                  <div id="about" className="">
                     <About />
                   </div>
-                  <div id="skills">
+                  <div id="skills" className="mt-6">
                     <Skills />
                   </div>
                   <div id="projects">

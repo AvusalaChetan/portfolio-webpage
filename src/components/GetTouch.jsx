@@ -7,7 +7,7 @@ const GetTouch = () => {
         const [isHovered, setIsHovered] = useState(false);
   if (state.succeeded) {
     return (
-      <div className="text-center mt-8" id='container'>
+      <div className="text-center mt-8 md:w-full" id='container'>
         <p className="text-2xl font-semibold text-teal-400">
           🎉 Thanks for reaching out! 🎉
         </p>
