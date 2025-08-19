@@ -8,6 +8,9 @@ body, main{
     scroll-behavior: smooth;
  
 }
+html, body{
+    overflow-x: hidden;
+}
 @media (max-width: 768px) {
   
 #page-container{

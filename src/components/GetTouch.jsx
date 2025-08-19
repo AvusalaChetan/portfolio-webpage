@@ -102,7 +102,7 @@ const GetTouch = () => {
                  rows="5"
                  required
                  placeholder="Enter your message"
-                 className="w-full p-3 bg-white/10  placeholder-gray-400 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-teal-400 text-gray-100"
+                 className="w-full p-3 bg-white/10 border-l-12 border-purple-700  placeholder-gray-400 rounded-lg resize-none focus:outline-none focus:ring-2 focus:ring-teal-400 text-gray-100"
                ></textarea>
                <ValidationError
                  prefix="message"

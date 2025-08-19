@@ -30,15 +30,15 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
   return (
     <>
       <main
-        className="bg-gradient-to-br from-[#151042] via-[#302b63] to-[#24243e] text-white min-h-screen sm:w-[100vw] overflow-x-hidden "
-style={{ overflowX: "hidden", width: "100vw", maxWidth: "100vw" }}      >
+        className="bg-gradient-to-br from-[#151042] via-[#302b63] to-[#24243e] text-white min-h-screen w-full overflow-x-hidden "
+      >
         <Suspense>
-          <div className="loading-container  ">
+          <div className="loading-container">
             <AnimatePresence>
                 <div key="navbar">
                   <Navbar />
                 </div>
-              <div key="main-content" className="main-container  max-w-[100vw] px-2 sm:px-4 mx-auto">
+              <div key="main-content" className="main-container w-full max-w-full px-2 sm:px-4 mx-auto">
                 <div className="w-full lg:w-[80vw] sm:m-auto  rounded-md bg-opacity-80"
                   id="page-container"
                 >
