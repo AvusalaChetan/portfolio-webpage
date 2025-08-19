@@ -102,7 +102,7 @@ const Skills = () => {
 
   return (
     
-    <section className="min-h-screen lg:w-[80vw] px-4 py-6">
+    <section className="min-h-screen lg:w-[80vw] px-4 py-6 overflow-x-hidden">
       <div className=" mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">
           My <span className="text-purple-400">Skills</span>

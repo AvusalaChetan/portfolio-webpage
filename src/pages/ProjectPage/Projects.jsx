@@ -37,7 +37,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects-section" className=" lg:w-[80vw] w-[90vw] ">
+    <section id="projects-section" className=" lg:w-[80vw] w-[90vw] overflow-x-hidden ">
       <div id="projects-container" className="px-2 ">
         <h2 className="text-4xl font-bold mb-4 text-center ">
           <span className="text-purple-400">Projects</span> I Built

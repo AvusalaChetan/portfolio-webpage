@@ -52,7 +52,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="relative container lg:w-[80vw] sm:w-full min-h-full m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
+    <div className="relative overflow-x-hidden container lg:w-[80vw] sm:w-full min-h-full m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
       {/* Left Section */}
       <motion.div
         variants={containerVariant}

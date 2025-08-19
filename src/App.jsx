@@ -31,8 +31,7 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
     <>
       <main
         className="bg-gradient-to-br from-[#151042] via-[#302b63] to-[#24243e] text-white min-h-screen sm:w-[100vw] overflow-x-hidden "
-        style={{ overflowX: "hidden" }}
-      >
+style={{ overflowX: "hidden", width: "100vw", maxWidth: "100vw" }}      >
         <Suspense>
           <div className="loading-container  ">
             <AnimatePresence>
@@ -40,7 +39,7 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
                   <Navbar />
                 </div>
               <div key="main-content" className="main-container  max-w-[100vw] px-2 sm:px-4 mx-auto">
-                <div className="w-full lg:w-[80vw] sm:m-auto sm:  -0 rounded-md bg-opacity-80"
+                <div className="w-full lg:w-[80vw] sm:m-auto  rounded-md bg-opacity-80"
                   id="page-container"
                 >
                   <div id="home" className="h-[80vh] w-[90vw] sm:m-none lg:w-[80vw]  flex items-center justify-center" >
@@ -49,7 +48,7 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
                   <div id="about">
                     <About />
                   </div>
-                  <div id="skills" className="mt-6  w-[90vw] ">
+                  <div id="skills" className="mt-6  w-[90vw]  ">
                     <Skills />
                   </div>
                   <div id="projects">
