@@ -33,8 +33,8 @@ const Contact = () => {
   }
 
   return (
-    <div className="flex items-center justify-around gap-3.5">
-      <div className={`${isMobile ? "w-[100vw]" : "w-[45vw]"}`}>
+    <div className="flex items-center justify-around gap-3.5 lg:w-[80vw] w-[90vw]  lg:p-2.5 p-none">
+      <div className={`${isMobile ? "w-[100vw]" : "w-[45vw]"}  lg:p-2.5 p-none`}>
         <GetTouch />
       </div>
 

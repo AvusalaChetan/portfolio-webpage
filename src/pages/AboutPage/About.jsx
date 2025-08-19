@@ -19,9 +19,9 @@ const About = () => {
   return (
     <motion.section
       id="container"
-      className="sm:w-[100vw] sm:m-0 lg:m-auto lg:w-full "
+      className="w-[90vw] sm:m-0 lg:m-auto lg:w-full "
     >
-      <div id="content" className="max-w-7xl mx-auto">
+      <div id="content" className="max-w-[80vw] mx-auto">
         <h2 id="heading" className="text-4xl font-bold text-white mb-6 text-center ">
           <motion.span className="text-purple-400">About</motion.span> <span className="text-white"> Me</span>
         </h2>

@@ -30,7 +30,7 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
   return (
     <>
       <main
-        className="bg-gradient-to-br from-[#151042] via-[#302b63] to-[#24243e] h-screen  text-white min-h-screen w-full overflow-x-hidden "
+        className="bg-gradient-to-br from-[#151042] via-[#302b63] to-[#24243e] text-white min-h-screen sm:w-[100vw] overflow-x-hidden "
         style={{ overflowX: "hidden" }}
       >
         <Suspense>
@@ -39,17 +39,17 @@ const LazyContactPage = lazy(()=>import('./pages/ContactPage/Contact'))
                 <div key="navbar">
                   <Navbar />
                 </div>
-              <div key="main-content" className="main-container w-full max-w-[100vw] px-2 sm:px-4 mx-auto">
-                <div className="w-full lg:w-[80vw] md:m-auto  sm:border-0 rounded-md bg-opacity-80"
+              <div key="main-content" className="main-container  max-w-[100vw] px-2 sm:px-4 mx-auto">
+                <div className="w-full lg:w-[80vw] sm:m-auto sm:  -0 rounded-md bg-opacity-80"
                   id="page-container"
                 >
-                  <div id="home" className="h-[80vh] sm:w-full lg:w-[80vw]  flex items-center justify-center" >
+                  <div id="home" className="h-[80vh] w-[90vw] sm:m-none lg:w-[80vw]  flex items-center justify-center" >
                     <Home />
                   </div>
-                  <div id="about" className="">
+                  <div id="about">
                     <About />
                   </div>
-                  <div id="skills" className="mt-6">
+                  <div id="skills" className="mt-6  w-[90vw] ">
                     <Skills />
                   </div>
                   <div id="projects">

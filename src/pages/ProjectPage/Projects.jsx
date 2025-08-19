@@ -37,10 +37,10 @@ const Projects = () => {
   }, []);
 
   return (
-    <section id="projects-section">
-      <div id="projects-container">
+    <section id="projects-section" className=" lg:w-[80vw] w-[90vw] ">
+      <div id="projects-container" className="px-2 ">
         <h2 className="text-4xl font-bold mb-4 text-center ">
-          <span className="text-teal-400">Projects</span> I Built
+          <span className="text-purple-400">Projects</span> I Built
         </h2>
         <p className="text-gray-400 mb-6">
           Explore some of the exciting projects I've worked on, showcasing my
@@ -49,7 +49,7 @@ const Projects = () => {
 
         <div
           id="projects-list"
-          style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}
+          className="flex items-center justify-center gap-2"
         >
           {projects.map((project, index) => (
             <motion.div

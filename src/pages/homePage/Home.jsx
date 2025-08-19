@@ -52,18 +52,18 @@ const Home = () => {
   ];
 
   return (
-    <div className="relative container lg:w-[80vw] min-w-full min-h-full m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
+    <div className="relative container lg:w-[80vw] sm:w-full min-h-full m-auto flex flex-col md:flex-row items-center justify-center overflow-hidden text-center">
       {/* Left Section */}
       <motion.div
         variants={containerVariant}
         initial="hidden"
         animate="visible"
-        className="flex flex-col justify-center gap-6 z-10 w-full md:w-1/2 px-2"
+        className="flex flex-col justify-center gap-4 z-10 w-full md:w-1/2 px-2"
         id="content"
       >
         <motion.p
           variants={fadeInUp}
-          className="text-purple-400 text-lg font-medium ml-4"
+          className="text-purple-400 text-lg font-medium ml-4 "
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 0.2 }}
@@ -82,7 +82,7 @@ const Home = () => {
 
         <motion.hr
           initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: 580 }}
+          animate={{ opacity: 1, width: 300 }}
           transition={{ duration: 1.5, delay: 1, ease: "easeInOut" }}
           className="h-[0.3rem] bg-gradient-to-r from-[#d4af37] via-[#f3e5ab] to-[#b8860b] rounded-lg border-none m-auto"
           style={{ width: 210 }}

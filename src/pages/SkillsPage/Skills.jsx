@@ -102,8 +102,8 @@ const Skills = () => {
 
   return (
     
-    <section className="min-h-screen w-full px-4 py-6 mt-6">
-      <div className="max-w-7xl mx-auto text-center">
+    <section className="min-h-screen lg:w-[80vw] px-4 py-6">
+      <div className=" mx-auto text-center">
         <h2 className="text-4xl font-bold mb-6">
           My <span className="text-purple-400">Skills</span>
         </h2>
@@ -122,7 +122,7 @@ const Skills = () => {
               {category.skills.map((skill, index) => (
                 <motion.button
                   whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.1 }}
                   onClick={() => {
                     if (skill.certificate) {
                       window.open(
