@@ -6,7 +6,6 @@ const HomeRightBox = () => {
     <div className="border-gray-400 rounded-2xl overflow-hidden lg:w-fit md:w-[40rem] md:px-2 md:py-4 md:mr-11 border lg:mt-4 ">
       <HoverBehaviour scale={2}>
         <ul className=" text-xl  list-disc lg:p-4 sm:px-2 list-inside ">
-          {/* <h3 className="font-bold underline">Education</h3> */}
           <li>I am in <span className="text-[#2563EB] font-bold">B-Tech III year</span></li>
           <li>My branch is <span className="text-[#F97316] font-bold">Electronics and Communication Engineering</span></li>
           <li>I have strong knowledge of <span className="text-[#EAB308] font-bold">Microcontrollers & IoT </span> </li>

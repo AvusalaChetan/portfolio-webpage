@@ -41,7 +41,7 @@ This site highlights:
    npm run build
 4. Preview production build:
    npm run preview
-
+   
 ---
 
 ## Project structure
