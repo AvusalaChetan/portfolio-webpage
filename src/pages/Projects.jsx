@@ -3,12 +3,12 @@ import Card from "../components/Card";
 
 const Projects = () => {
   return (
-    <div id="projects" className="min-h-screen w-full bg-black text-white">
-      <H1 text={"my Projects"} color={"white"} />
-      <div className=" w-[95%] min-h-[80vh] p-2 mt-3 mx-auto">
-        <Card />
+    <section id="projects" className="min-h-screen w-full bg-black text-white py-12">
+        <H1 text={"my Projects"} color={"white"} />
+      <div className="max-w-[1200px] mx-auto px-4">
+          <Card />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -5,55 +5,89 @@ const AboutPage = () => {
   return (
     <main
       id="about"
-      className="bg-black/90 text-white min-h-screen w-full "
+      className="bg-black/90 text-white min-h-screen w-full md:px-3 px-4  lg:px-0 text-justify py-5 "
       aria-label="About section"
     >
-          <H1 text={"About Me"} color={'white'}/>
-      <div className="max-w-4xl mx-auto my-8 space-y-10 flex items-start justify-around flex-col ">
+      <H1 text={"About Me"} color={"white"} />
+      <div className="max-w-4xl mx-auto my-4 space-y-10 flex items-start justify-around flex-col ">
+        <section aria-labelledby="about-image" className="space-y-3">
+          <h3 id="about-image" className="text-xl font-semibold underline">
+            Profile
+          </h3>
+          <div className="w-full max-w-xs mx-auto">
+            <img
+            src=""
+              alt="Avusala Chetan"
+              className="rounded-xl w-full h-auto object-cover shadow-md"
+            />
+          </div>
+        </section>
 
-        <section aria-labelledby="about-intro" className="space-y-3">
-          <p className="text-lg">
-            I'm Avusala Chetan — B.Tech, 3rd year, studying Electronics &
-            Communication Engineering. I'm curious, detail-oriented and enjoy
-            turning ideas into working systems.
+        <section aria-labelledby="about-education" className="space-y-2 ">
+          <h3 id="about-education" className="text-xl font-semibold underline ">
+            Education
+          </h3>
+          <p className="text-base">
+            I completed my schooling in 2021 from{" "}
+            <span className="font-bold">Sri Sai Vidya Niketan High School</span>{" "}
+            with a score of{" "}
+            <span className="text-orange-500 font-semibold">90%</span> (Grade:
+            9.0). <br />I pursued my Intermediate (MPC) at{" "}
+            <span className="font-bold">Sri Chaitanya Junior College</span> and
+            graduated in 2023 with{" "}
+            <span className="text-orange-500 font-semibold">85%</span>. <br />
+            Currently, I'm in my 3rd year of B.Tech in{" "}
+            <span className="text-amber-600 font-semibold">
+              Electronics and Communication Engineering
+            </span>
+            .
           </p>
         </section>
 
-        <section aria-labelledby="about-skills" className="space-y-3">
-          <h3 id="about-skills" className="text-xl font-semibold underline">
-            What I Work On
+        <section aria-labelledby="about-goals" className="space-y-2">
+          <h3 id="about-goals" className="text-xl font-semibold underline">
+            Career Goals
           </h3>
           <p className="text-base">
-            I focus on embedded systems and IoT, and also build web Frontends or
-            the MERN stack.
+            My ambition is to become a skilled{" "}
+            <span className="font-bold text-purple-700">
+              Embedded Systems Engineer
+            </span>{" "}
+            in the semiconductor industry. While I currently have hands-on
+            experience with{" "}
+            <span className="font-semibold text-blue-500">
+              Arduino programming
+            </span>
+            , I'm actively upskilling in areas like microcontrollers, RTOS, and
+            low-level firmware development. <br />
+             I also have solid experience in{" "}
+            <span className="font-semibold text-blue-300">
+              MERN stack development
+            </span>
+            , and have built multiple full-stack projects.
+          </p>
+        </section>
+
+        <section aria-labelledby="about-path" className="space-y-2">
+          <h3 id="about-path" className="text-xl font-semibold underline">
+            My Path Forward
+          </h3>
+          <p className="text-base">
+            I'm deeply committed to transitioning into embedded systems.
+            Although my current portfolio is mostly web-based, I'm bridging the
+            gap by:
           </p>
           <ul className="list-disc pl-5 space-y-1 text-base">
-            <li>Embedded C, Microcontrollers (ARM/AVR), RTOS basics</li>
-            <li>Arduino Uno and Arduino Uno programming</li>
-            <li>IoT: sensors, MQTT,STM32, ESP32 workflows</li>
-            <li>Frontend & MERN: React, Node, Express, MongoDB</li>
+            <li>Building embedded projects using Arduino and ESP32</li>
+            <li>Documenting my learning journey and publishing it online</li>
+            <li>Contributing to open-source embedded tools and libraries</li>
+            <li>Seeking internships and mentorships in embedded domains</li>
           </ul>
-        </section>
-
-        <section aria-labelledby="about-goals" className="space-y-3">
-          <h3 id="about-goals" className="text-xl font-semibold underline">
-            Current Goals
-          </h3>
           <p className="text-base">
-            Improving low-level embedded design and firmware testing practices
-            while building full-stack side projects. <br />goal: join the
-            semiconductor/embedded systems industry.
-          </p>
-        </section>
-
-        <section aria-labelledby="about-personal" className="space-y-3">
-          <h3 id="about-personal" className="text-xl font-semibold underline">
-            A Bit More About Me
-          </h3>
-          <p className="text-base">
-            I enjoy collaborative problem solving, learning new stacks, and
-            balancing hardware work with web development. Outside of tech I like
-            reading and tinkering with small hardware projects.
+            My MERN stack experience gives me an edge in IoT and full-stack
+            integration. I believe this hybrid skill set will help me stand out
+            in embedded system roles that require both hardware and software
+            fluency.
           </p>
         </section>
       </div>

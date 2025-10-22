@@ -16,7 +16,6 @@ console.log("Scroll progress:", scrollYProgress.get());
           right: 0,
           bottom:0,
           width: "6px",
-          // backgroundColor: "red",
         backgroundColor:'white',
           transformOrigin: "top",
           scaleY: scrollYProgress, 

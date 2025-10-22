@@ -5,9 +5,9 @@ import { useGSAP } from "@gsap/react";
 
 const Card = () => {
   return (
-    <div className="h-full flex flex-wrap gap-6 justify-start items-start p-4">
+    <div className="h-full flex flex-wrap gap-6 justify-start md:justify-around items-start p-4">
       {myProject.map((item, idx) => (
-        <main id="cardContainer" key={idx} className="w-full sm:w-[350px] md:w-[350px] lg:w-[350px] xl:w-[350px]">
+        <main id="cardContainer" key={idx} className="w-full sm:w-[350px] md:w-[320px] lg:w-[350px] xl:w-[350px]">
           <div className="h-[500px] bg-white/10 shadow-lg rounded-3xl overflow-hidden transition-transform hover:scale-102 backdrop-blur-md flex flex-col">
             <div className="relative">
               <img

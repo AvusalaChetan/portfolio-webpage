@@ -1,58 +1,71 @@
-# Chetan's Portfolio Website
+# Chetan — My Personal Portfolio
 
-A modern, responsive personal portfolio website built with **React**, **Vite**, and **Tailwind CSS**. Showcasing my projects, skills, and contact information in a visually engaging way.
-
----
-
-## 🚀 Project Overview
-This portfolio is designed to highlight my work as a developer, featuring:
-- Interactive project showcases
-- Animated hero section
-- Responsive design for all devices
-- Smooth navigation and transitions
-- Downloadable resume and contact form
+A clean, responsive portfolio built with React, Vite and Tailwind CSS to showcase projects, skills and contact details.
 
 ---
 
-## ✨ Features
-- **Animated landing page** with typing and wave effects
-- **Project gallery** with hover overlays
-- **Skills section** with icons
-- **Contact form** for direct communication
-- **Mobile-friendly** navigation and layout
-- **Social media links**
+## Quick summary
+This site highlights:
+- Project showcases with live links and screenshots
+- Interactive animated hero and smooth transitions
+- Skills and technology overview
+- Contact form and downloadable resume
+- Mobile-first, accessible design
 
 ---
 
-## 🛠️ Tech Stack
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Framer Motion](https://www.framer.com/motion/) (animations)
-- [React Icons](https://react-icons.github.io/react-icons/) (icons)
+## Features
+- Animated landing section (typing, subtle motion)
+- Project gallery with hover states and detail pages
+- Skills section with icons and proficiency indicators
+- Contact form (email / submission)
+- Social links and resume download
 
 ---
 
-## 📁 Folder Structure
+## Tech stack
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion (animations)
+- React Icons
+
+---
+
+## Run locally (Windows)
+1. Install dependencies:
+   npm install
+2. Start dev server:
+   npm run dev
+3. Build for production:
+   npm run build
+4. Preview production build:
+   npm run preview
+
+---
+
+## Project structure
 ```
-portfolio-website/
-  ├── public/
-  ├── src/
-  │   ├── assets/         # SVGs and images
-  │   ├── components/     # Reusable components
-  │   ├── effects/        # Animation/effect utilities
-  │   ├── pages/          # Main page sections
-  │   └── App.jsx         # App entry
-  ├── index.html
-  └── ...
+portfolio/
+  ├─ public/                # static 
+  ├─ src/
+  │  ├─ components/         # reusable  UI pieces
+  │  ├─ animation/          # motion helpers
+  │  ├─ pages/              # sections 
+  │  └─ App.jsx             # app entry
+  ├─ index.html
+  └─ package.json
 ```
+---
+## Contributing
+- Fork, branch and submit PRs for fixes or enhancements.
+- Keep changes focused and include brief descriptions.
 
 ---
 
-## 👤 Author
-**Avusala Chetan**
+## Author
+Avusala Chetan  
+- LinkedIn: https://linkedin.com/in/your-linkedin  
+- GitHub: https://github.com/your-github
 
-- [LinkedIn](https://linkedin.com/in/your-linkedin)
-- [GitHub](https://github.com/your-github)
-
-Feel free to reach out for collaboration or feedback!
+Feel free to open issues or reach out for collaborations.

@@ -1,201 +1,182 @@
-import  { useRef, useState } from "react";
-import { motion } from "motion/react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import MobileNavbar from "./MobileNavbar";
-import MagnetEffect from "../effects/MagnetEffect";
+import React, { useEffect, useState } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { HoverBehaviour } from "../animations/Cursor";
+import { MdOutlineFileDownload } from "react-icons/md";
+import { FiMenu, FiX } from "react-icons/fi";
+import styles from "./Navbar.module.css";
+import Floating from "../animations/Floating";
 
-{/* animation of SVG */}
-const svgVariant = {
-  hidden: { rotate: -90 },
-  visible: {
-    rotate: 0,
-    transition: { duration: 1 },
-  },
-};
+const navRought = [
+  { text: "home", to: "#home" },
+  { text: "about", to: "#about" },
+  { text: "skills", to: "#skills" },
+  { text: "projects", to: "#projects" },
+];
 
-const pathVariant = {
-  hidden: {
-    pathLength: 0,
-    opacity: 0,
-  },
-  visible: {
-    pathLength: 1,
-    opacity: [0.6, 1],
-    transition: {
-      delay: 1.0,
-      duration: 2,
-      ease: "easeInOut",
-    },
-  },
-};
-
-{/* animation of UL */}
-const ulVarient = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 1.3,
-      duration: 1.5,
-      staggerChildren: 0.3,
-      ease: [0.25, 0.1, 0.25, 1],
-      when: 'beforeChildren',
-    },
-  },
-};
-
-const liVariant = {
-  hidden: {
-    opacity: 0,
-    y: -6,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1.3,
-      ease: 'easeInOut',
-    },
-  },
+const roughtActiveClass = {
+  "#home": "text-[24px] text-blue-500 border-b-4 font-semibold capitalize",
+  "#about": "text-[24px] text-black border-b-4 font-semibold capitalize",
+  "#skills": "text-[24px] text-yellow-500 border-b-4 font-semibold capitalize",
+  "#projects":
+    "text-[24px] text-purple-500 border-b-4 font-semibold capitalize",
 };
 
 const Navbar = () => {
-  const navRef = useRef(null);
-  const [navOpen, setNavOpen] = useState(false);
-  const navbarMobileBtn = useRef(null);
-  const { contextSafe } = useGSAP({ scope: navbarMobileBtn });
+  const { hash } = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
-  const onClickNavbtnHandile = contextSafe(() => {
-    setNavOpen((prev) => !prev);
-    gsap.to(navbarMobileBtn.current, {
-      duration: 0.5,
-      rotation: navOpen ? 0 : 90,
-      ease: "power2.inOut",
-    });
-  });
-  
-  const closeNavbar = contextSafe(() => {
-    setNavOpen(false);
-    gsap.to(navbarMobileBtn.current, {
-      duration: 0.5, 
-      rotation: 0,
-      ease: "power2.inOut",
-    });
-  });
+  useEffect(() => {
+    setTimeout(() => {
+      if (!hash) return;
+      const id = hash.replace("#", "");
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    }, 150);
+  }, [hash]);
 
   return (
-    <header className="w-full max-w-[90vw] m-auto">
-      <nav className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          
-          <MagnetEffect>
-             <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-400 font-extrabold text-2xl md:text-3xl">
-          Avusala Chetan
-        </h1>
-          </MagnetEffect>
+    <header className="bg-gray-50 border-b z-40 px-4 md:px-8 lg:px-20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
+        <HoverBehaviour scale={4.5} border={"1px outset red"}>
+          <h1 className="text-2xl md:text-3xl font-semibold capitalize">
+            My portfolio
+          </h1>
+        </HoverBehaviour>
 
-          {/* Desktop Navbar */}
-          <div className="hidden md:flex items-center justify-between gap-1 w-fit p-3">
-            <motion.ul
-              variants={ulVarient}
-              initial="hidden"
-              animate="visible"
-              ref={navRef}
-              className="navul flex space-x-8 text-gray-300 font-medium"
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-6">
+          {navRought.map((item) => (
+            <HoverBehaviour
+              key={item.text}
+              scale={2.8}
+              border={"1px solid red"}
             >
-              <MagnetEffect>
-                <motion.li
-                  variants={liVariant}
-                  className="hover:text-white cursor-pointer transition"
-                >
-                  <a href="#home">Home</a>
-                </motion.li>
-              </MagnetEffect>
-
-              <MagnetEffect>
-                <motion.li
-                  variants={liVariant}
-                  className="hover:text-white cursor-pointer transition"
-                >
-                  <a href="#about">About</a>
-                </motion.li>
-              </MagnetEffect>
-
-              <MagnetEffect>
-                <motion.li
-                  variants={liVariant}
-                  className="hover:text-white capitalize cursor-pointer transition"
-                >
-                  <a href="#skills">Skills</a>
-                </motion.li>
-              </MagnetEffect>
-
-              <MagnetEffect>
-                <motion.li
-                  variants={liVariant}
-                  className="hover:text-white cursor-pointer transition"
-                >
-                  <a href="#projects">Projects</a>
-                </motion.li>
-              </MagnetEffect>
-
-              <MagnetEffect>
-                <motion.li
-                  variants={liVariant}
-                  className="hover:text-white cursor-pointer transition"
-                >
-                  <a
-                 href="#contact" 
-                  >Contact</a>
-                </motion.li>
-              </MagnetEffect>
-            </motion.ul>
-          </div>
-
-          {/* Mobile Button */}
-          <div
-            ref={navbarMobileBtn}
-            className="md:hidden navbar-mobile-btn fixed right-4 z-50"
-          >
-            <button
-              onClick={onClickNavbtnHandile}
-              className={`text-gray-100  hover:text-white focus:outline-none ${navOpen?'hidden':''}`}
-            >
-              <motion.svg
-                variants={svgVariant}
-                initial="hidden"
-                animate="visible"
-                className="h-6 w-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+              <NavLink
+                to={item.to}
+                className={() =>
+                  hash === item.to
+                    ? roughtActiveClass[item.to]
+                    : "text-lg capitalize"
+                }
               >
-                <motion.path
-                  variants={pathVariant}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </motion.svg>
-            </button>
-          </div>
+                {item.text}
+              </NavLink>
+            </HoverBehaviour>
+          ))}
+
+          <Contact className="ml-4" />
+          <ResumeDownloadBtn />
+        </nav>
+
+        {/* Mobile controls */}
+        <div className="md:hidden flex items-center gap-3">
+          <Contact />
+          <button
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            {mobileOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile menu */}
+      {mobileOpen && <MobileNavbar hash={hash} setMobileOpen={setMobileOpen} />}
+    </header>
+  );
+};
+
+const MobileNavbar = ({ hash, setMobileOpen }) => {
+  return (
+    <div
+      className="md:hidden fixed inset-0 bg-black/40 z-50"
+      onClick={() => setMobileOpen(false)}
+    >
+      <div
+        className="absolute right-0 top-0 w-72 h-full bg-white shadow-lg p-6 flex flex-col"
+        onClick={(e) => e.stopPropagation()}
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="text-lg font-semibold">Menu</h2>
+          <button
+            onClick={() => setMobileOpen(false)}
+            aria-label="Close"
+            className="p-1"
+          >
+            <FiX />
+          </button>
         </div>
 
-        <motion.hr
-          initial={{ width: 0, opacity: 0 }}
-          animate={{ width: '100%', opacity: 1 }}
-          transition={{ delay: 1, duration: 2.4, ease: 'easeOut' }}
-          className="text-white bg-cyan-400 w-55 mt-2 h-[0rem]"
-        />
-      </nav>
+        <div className="flex flex-col gap-4">
+          {navRought.map((item) => (
+            <NavLink
+              key={item.text}
+              to={item.to}
+              onClick={() => setMobileOpen(false)}
+              className={() =>
+                hash === item.to
+                  ? roughtActiveClass[item.to]
+                  : "text-base capitalize"
+              }
+            >
+              {item.text}
+            </NavLink>
+          ))}
+        </div>
+        <div className="mt-auto">
+          <ResumeDownloadBtn small />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-      {/* Side Navbar */}
-      <MobileNavbar navOpen={navOpen} openNav={onClickNavbtnHandile} closeNav={closeNavbar} />
-    </header>
+const Contact = ({ className = "" }) => {
+  const links = {
+    linkedin: "https://www.linkedin.com/in/avusala-chetan-73a697312",
+    github: "https://github.com/AvusalaChetan",
+  };
+
+  const onChangeHandile = (e) => {
+    const selected = e.target.value;
+    if (links[selected]) window.open(links[selected], "_blank");
+  };
+
+  return (
+    <select
+      onChange={onChangeHandile}
+      className={`border rounded px-2 py-1 bg-white text-sm ${className}`}
+      aria-label="Contact options"
+    >
+      <option value="">Contact</option>
+      <option value="linkedin">LinkedIn</option>
+      <option value="github">GitHub</option>
+    </select>
+  );
+};
+
+const ResumeDownloadBtn = ({ small = false }) => {
+  const download = () => {};
+
+  return (
+    <Floating mt={3}>
+      <HoverBehaviour w={small ? "20%" : "7%"} h={"35px"} br={"5px"}>
+        <button
+          onClick={download}
+          className={`px-3 flex items-center justify-center gap-2 ${
+            styles.border
+          } ${small ? "text-sm" : ""}`}
+        >
+          Resume <MdOutlineFileDownload />
+        </button>
+      </HoverBehaviour>
+    </Floating>
   );
 };
 
