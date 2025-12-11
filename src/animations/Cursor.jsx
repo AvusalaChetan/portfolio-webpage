@@ -1,18 +1,28 @@
-import React, { Children, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const Cursor = ({ Children }) => {
+const Cursor = () => {
   const cursorRef = useRef(null);
+  const cursorDotRef = useRef(null);
 
   useEffect(() => {
     const handleMouseMove = (event) => {
       const { clientX, clientY } = event;
+      
+      // Main cursor - smooth, delayed follow
       gsap.to(cursorRef.current, {
-        x: clientX - 10,
-        y: clientY - 70,
-        duration: 1,
-        delay: 0,
-        ease: "power4.out",
+        x: clientX,
+        y: clientY,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+
+      // Inner dot - faster, snappy
+      gsap.to(cursorDotRef.current, {
+        x: clientX,
+        y: clientY,
+        duration: 0.1,
+        ease: "power2.out",
       });
     };
 
@@ -24,48 +34,57 @@ const Cursor = ({ Children }) => {
 
   return (
     <>
+      {/* Outer ring */}
       <div
         ref={cursorRef}
         id="cursor"
-        className="fixed  bg-white w-5 h-5  rounded-full pointer-events-none mix-blend-difference"
-      ></div>
+        className="fixed w-10 h-10 border-2 border-white rounded-full pointer-events-none mix-blend-difference z-999 -translate-x-1/2 -translate-y-1/2 transition-transform"
+      />
+      
+      {/* Inner dot */}
+      <div
+        ref={cursorDotRef}
+        className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-999 -translate-x-1/2 -translate-y-1/2"
+      />
     </>
   );
 };
 
-export const HoverBehaviour = ({ children, scale, border, bgc,w,h,br }) => {
-  const mouseEnter = (scale, border, bgc,w,h,br) => {
+export const HoverBehaviour = ({ children, scale, border, bgc, w, h, br }) => {
+  const mouseEnter = () => {
+    const colorValue = typeof bgc === "function" ? bgc() : bgc;
+    
     gsap.to("#cursor", {
-      scale: scale,
-      duration: 0.3,
-      border: border,
-      backgroundColor: bgc,
-      width:w,
-      height:h,
-      borderRadius:br,
+      scale: scale || 1.8,
+      duration: 0.4,
+      border: border || "2px solid white",
+      backgroundColor: colorValue || "rgba(255, 255, 255, 0.1)",
+      width: w || "50px",
+      height: h || "50px",
+      borderRadius: br || "50%",
+      rotate: 180,
+      ease: "elastic.out(1, 0.4)",
     });
   };
+
   const mouseLeave = () => {
     gsap.to("#cursor", {
       scale: 1,
-      duration: 0.3,
-      border: "none",
-      backgroundColor: "white",
-      width:"20px",
-      height:"20px",
-      borderRadius:'50%'
+      duration: 0.5,
+      border: "2px solid white",
+      backgroundColor: "transparent",
+      width: "40px",
+      height: "40px",
+      borderRadius: "50%",
+      rotate: 0,
+      ease: "elastic.out(1, 0.4)",
     });
   };
 
   return (
     <div
-      onMouseEnter={() => {
-        mouseEnter(scale, border, bgc,w,h,br);
-      }}
-      onMouseLeave={() => {
-        mouseLeave(scale, border, bgc);
-      }}
-      className=""
+      onMouseEnter={mouseEnter}
+      onMouseLeave={mouseLeave}
     >
       {children}
     </div>
