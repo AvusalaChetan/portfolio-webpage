@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
+
+.name {
+  display: inline-block;    /* prevents transform from affecting surrounding flow */
+  transform-origin: center center;
+  will-change: transform;
+  /* keep your stroke/fill rules as before */
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  font-family:"Anton", "Rubik Vinyl", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 10rem;
+}

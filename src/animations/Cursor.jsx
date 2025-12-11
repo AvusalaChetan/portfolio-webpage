@@ -27,7 +27,7 @@ const Cursor = ({ Children }) => {
       <div
         ref={cursorRef}
         id="cursor"
-        className="fixed  bg-white w-[20px] h-[20px]  rounded-full pointer-events-none mix-blend-difference"
+        className="fixed  bg-white w-5 h-5  rounded-full pointer-events-none mix-blend-difference"
       ></div>
     </>
   );

@@ -4,25 +4,33 @@
     "projectDiscreption": "A wether app which take the city name as input and show the Weather of that city. it use api.",
     "projectExp": "it was my first API project that was hosted. ",
     "projectUrl": "https://darling-meringue-393b73.netlify.app/",
-    "TechUse": ["html", "css", "js"],
-"projectImage": "/projectImages/weatherApp.png",
+    "TechUse": [
+      "html",
+      "css",
+      "js"
+    ],
+    "projectImage": "/projectImages/weatherApp.png",
     "projectDate": {
-      "startDate": "",
-      "endDate": ""
+      "startDate": "24/7/2023",
+      "endDate": "24/7/2023"
     },
     "projectType": "web application",
     "githubUrl": "https://github.com/AvusalaChetan/Weather-app"
   },
   {
     "projectName": "blogify",
-    "projectDiscreption": "A simple backend project where you can share you exprence or evet or tech related info and ext... in the form of blog. other people can share there openine on it in the form of comment",
+    "projectDiscreption": "A simple backend project where you can share you exprence/evet/tech related info in the form of blog. other people can share there openine on it",
     "projectExp": "it was my first Backend project that was hosted. ",
     "projectUrl": "https://blogify-qr2y.onrender.com/",
-    "TechUse": ["Node.js", "express.js", "ejs"],
+    "TechUse": [
+      "Node.js",
+      "express.js",
+      "ejs"
+    ],
     "projectImage": "/projectImages/blogify.png",
     "projectDate": {
-      "startDate": "",
-      "endDate": ""
+      "startDate": "15/6/2025",
+      "endDate": "22/6/2025"
     },
     "projectType": "web application",
     "githubUrl": "https://github.com/AvusalaChetan/blogify"
@@ -32,11 +40,15 @@
     "projectDiscreption": "A just funny game where you can enter your name and your crush name  see the relation. ",
     "projectExp": "Flames was my first solo project — built from scratch without relying on any YouTube tutorials.",
     "projectUrl": "https://achetan.netlify.app/",
-    "TechUse": ["html", "css", "js"],
+    "TechUse": [
+      "html",
+      "css",
+      "js"
+    ],
     "projectImage": "/projectImages/image.png",
     "projectDate": {
-      "startDate": "day/mon/yr",
-      "endDate": "day/mon/yr"
+      "startDate": "27/10/2024",
+      "endDate": "27/10/2024"
     },
     "projectType": "web application",
     "githubUrl": "https://github.com/AvusalaChetan/Flames-"

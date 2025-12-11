@@ -48,7 +48,7 @@ className="hidden sm:flex relative items-center justify-center lg:h-[85vh] h-[60
               animate={inView ? "visible" : "hidden"}
               transition={{ duration: 0.6 }}
               className="circle absolute rounded-full p-1 overflow-hidden flex items-center justify-center 
-                         w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px]"
+                         w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-20 md:h-20"
             >
               <HoverBehaviour scale={5} bgc={"#ff9800"}>
                 <img

@@ -16,7 +16,7 @@ const AboutPage = () => {
           </h3>
           <div className="w-full max-w-xs mx-auto">
             <img
-            src=""
+            src={null}
               alt="Avusala Chetan"
               className="rounded-xl w-full h-auto object-cover shadow-md"
             />

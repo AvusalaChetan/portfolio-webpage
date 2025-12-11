@@ -1,14 +1,18 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import myProject from "../pages/json/projects.json";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const Card = () => {
   return (
-    <div className="h-full flex flex-wrap gap-6 justify-start md:justify-around items-start p-4">
+    <div 
+    className="h-full  flex flex-wrap gap-6 justify-start md:justify-around items-start p-4">
       {myProject.map((item, idx) => (
-        <main id="cardContainer" key={idx} className="w-full sm:w-[350px] md:w-[320px] lg:w-[350px] xl:w-[350px]">
-          <div className="h-[500px] bg-white/10 shadow-lg rounded-3xl overflow-hidden transition-transform hover:scale-102 backdrop-blur-md flex flex-col">
+        <main id="cardContainer" key={idx}
+        className="w-full sm:w-[350px] md:w-[320px] lg:w-[350px] xl:w-[350px]">
+          <div 
+        
+          className="h-[500px] bg-white/10 shadow-lg rounded-3xl overflow-hidden transition-transform hover:scale-102 backdrop-blur-md flex flex-col">
             <div className="relative">
               <img
                 className="w-full h-48 object-contain object-center mx-auto sm:h-48 md:h-48 lg:h-48 xl:h-48"
@@ -84,16 +88,16 @@ const Card = () => {
                 </div>
               </div>
 
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center ">
                 <div>
                   <SideHeading sh="Type" />
                   <p className="text-gray-400 text-xs capitalize">
                     {item.projectType}
                   </p>
                 </div>
-                <div className="mb-2">
+                <div className="mb-2 ">
                   <SideHeading sh="Date" />
-                  <p className="text-gray-400 text-xs">
+                  <p className="text-gray-400 text-xs  ">
                     {item.projectDate.startDate} <br />{" "}
                     {item.projectDate.endDate}
                   </p>
