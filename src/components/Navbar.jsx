@@ -105,7 +105,7 @@ const Navbar = () => {
               ]}
             />
           </HoverBehaviour>
-          <Dropdown menu={{items: dropdown}}>contact</Dropdown>
+          <Dropdown menu={{items: dropdown}}>connect</Dropdown>
           <Button
             onClick={downloadResume}
             type="dashed"
@@ -201,7 +201,7 @@ const MobileNavbar = ({hash, setMobileOpen}) => {
           />
           <Dropdown menu={{items: dropdown}}>
             <Button type="text" style={{color: "purple"}}>
-              Contact
+              connect
             </Button>
           </Dropdown>
 

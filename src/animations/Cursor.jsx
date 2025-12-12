@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import gsap from "gsap";
 
 const Cursor = () => {
@@ -7,20 +7,22 @@ const Cursor = () => {
 
   useEffect(() => {
     const handleMouseMove = (event) => {
-      const { clientX, clientY } = event;
-      
-      // Main cursor - smooth, delayed follow
+      const {clientX, clientY} = event;
+
       gsap.to(cursorRef.current, {
-        x: clientX,
-        y: clientY,
+        x: clientX-1,
+        y: clientY-60,
+        xPercent: -50,
+        yPercent: -50,
         duration: 0.5,
         ease: "power3.out",
       });
 
-      // Inner dot - faster, snappy
       gsap.to(cursorDotRef.current, {
-        x: clientX,
-        y: clientY,
+        x: clientX-1,
+        y: clientY-60,
+        xPercent: -50,
+        yPercent: -50,
         duration: 0.1,
         ease: "power2.out",
       });
@@ -34,26 +36,24 @@ const Cursor = () => {
 
   return (
     <>
-      {/* Outer ring */}
       <div
         ref={cursorRef}
         id="cursor"
-        className="fixed w-10 h-10 border-2 border-white rounded-full pointer-events-none mix-blend-difference z-999 -translate-x-1/2 -translate-y-1/2 transition-transform"
+        className="fixed w-10 h-10 border-2 border-white rounded-full pointer-events-none mix-blend-difference z-999"
       />
-      
-      {/* Inner dot */}
+
       <div
         ref={cursorDotRef}
-        className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-999 -translate-x-1/2 -translate-y-1/2"
+        className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-999"
       />
     </>
   );
 };
 
-export const HoverBehaviour = ({ children, scale, border, bgc, w, h, br }) => {
+export const HoverBehaviour = ({children, scale, border, bgc, w, h, br}) => {
   const mouseEnter = () => {
     const colorValue = typeof bgc === "function" ? bgc() : bgc;
-    
+
     gsap.to("#cursor", {
       scale: scale || 1.8,
       duration: 0.4,
@@ -82,10 +82,7 @@ export const HoverBehaviour = ({ children, scale, border, bgc, w, h, br }) => {
   };
 
   return (
-    <div
-      onMouseEnter={mouseEnter}
-      onMouseLeave={mouseLeave}
-    >
+    <div onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}>
       {children}
     </div>
   );

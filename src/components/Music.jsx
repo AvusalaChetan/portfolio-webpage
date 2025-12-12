@@ -29,7 +29,7 @@ const handilePlay =()=>{
 }
   return (
     <>
-      {/* <audio ref={musicRef} src="music/song.mp3 " autoPlay /> */}
+      <audio ref={musicRef} src="" autoPlay />
 
       <button 
       onClick={handilePlay}

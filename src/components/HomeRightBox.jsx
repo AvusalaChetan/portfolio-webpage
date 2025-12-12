@@ -3,7 +3,7 @@ import { HoverBehaviour } from "../animations/Cursor";
 
 const HomeRightBox = () => {
   return (
-    <div className="border-gray-400 rounded-2xl overflow-hidden lg:w-fit md:w-[40rem] md:px-2 md:py-4 md:mr-11 border lg:mt-4 ">
+    <div className="border-gray-400 rounded-2xl overflow-hidden lg:w-fit md:w-160 md:px-2 md:py-4 md:mr-11 border lg:mt-4 ">
       <HoverBehaviour scale={2}>
         <ul className=" text-xl  list-disc lg:p-4 sm:px-2 list-inside ">
           <li>I am in <span className="text-[#2563EB] font-bold">B-Tech III year</span></li>

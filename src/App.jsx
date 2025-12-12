@@ -10,6 +10,7 @@ import Projects from "./pages/Projects";
 import ScrollBar from "./animations/ScrollBar";
 import Loading from "./pages/Loading";
 import Music from "./components/Music";
+import ContactCard from "./pages/ContactCard";
 
 function App() {
 
@@ -49,6 +50,7 @@ function App() {
       <AboutPage/>
       <SkillsPage/>
       <Projects/>
+      <ContactCard/>
     </ScrollBar>
     </main>
   );
