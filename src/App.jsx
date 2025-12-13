@@ -1,6 +1,6 @@
 import "./App.css";
 import {lazy, Suspense, useEffect, useState} from "react";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+// import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Navbar from "./components/Navbar";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage";
@@ -11,25 +11,25 @@ import Loading from "./pages/Loading";
 import Music from "./components/Music";
 import ContactCard from "./pages/ContactCard";
 import ParticleBg from "./animations/ParticleBg";
-import {Flex, Progress, Slider, Typography} from "antd";
+import {Progress, } from "antd";
 
 function App() {
   const [loading, setLoading] = useState(true);
   const SkillComponent = lazy(() => import("./pages/SkillsPage"));
 
-  const router = createBrowserRouter(
-    [
-      {
-        path: "",
-        element: (
-          <>
-            <Navbar />
-          </>
-        ),
-      },
-    ],
-    {future: {v7_startTransition: true}}
-  );
+  // const router = createBrowserRouter(
+  //   [
+  //     {
+  //       path: "",
+  //       element: (
+  //         <>
+  //           <Navbar />
+  //         </>
+  //       ),
+  //     },
+  //   ],
+  //   {future: {v7_startTransition: true}}
+  // );
 
   useEffect(() => {
     const timer = setTimeout(() => setLoading(false), 3000);
@@ -41,7 +41,8 @@ function App() {
   return (
     <main className="bg-gray-50 w-full overflow-x-hidden ">
       <ScrollBar>
-        <RouterProvider router={router} />
+        {/* <RouterProvider router={router} /> */}
+        <Navbar/>
         <Cursor />
         <ParticleBg />
         <Music />

@@ -1,5 +1,4 @@
-import {useEffect, useState} from "react";
-import {useLocation} from "react-router-dom";
+import {useState} from "react";
 import {HoverBehaviour} from "../animations/Cursor";
 import {MdOutlineFileDownload} from "react-icons/md";
 import {FiMenu, FiX} from "react-icons/fi";
@@ -59,23 +58,9 @@ const roughtActiveClass = {
 };
 
 const Navbar = () => {
-  const {hash} = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const downloadResume = () => {};
-
-  useEffect(() => {
-    setTimeout(() => {
-      if (!hash) return;
-      const id = hash.replace("#", "");
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView({behavior: "smooth", block: "start"});
-      } else {
-        window.scrollTo({top: 0, behavior: "smooth"});
-      }
-    }, 150);
-  }, [hash]);
 
   return (
     <>

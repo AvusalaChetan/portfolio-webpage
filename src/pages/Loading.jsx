@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Flex, Progress, Typography } from "antd";
-import { color, transform } from "motion";
+import { Flex, Progress } from "antd";
 
 const Loading = () => {
   

@@ -1,7 +1,5 @@
-import {delay, motion} from "framer-motion";
+import {motion} from "framer-motion";
 import styles from "./home.module.css";
-import {style} from "motion/react-client";
-import ParticleBg from "../../animations/ParticleBg";
 
 const name = "avusala chetan";
 const letters = name.split("");

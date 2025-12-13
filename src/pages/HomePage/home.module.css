@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
 
-.hello{
-
-}
 .name {
   display: block;
   transform-origin: center center;
@@ -11,7 +8,6 @@
   -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  /* -webkit-text-stroke-color: #9333ea;  */
   font-family: "Anton", "Rubik Vinyl", system-ui;
   font-weight: 400;
   font-style: normal;
@@ -21,7 +17,7 @@
 
 
 .name {
-  font-size: 2.5rem; /* base mobile size */
+  font-size: 2.5rem;
 }
 
 @media (min-width: 640px) { /* sm */
