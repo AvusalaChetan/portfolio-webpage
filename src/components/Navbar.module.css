@@ -1,12 +1,6 @@
-
-.border{
-    border:1px solid rgba(189, 20, 240, 0.381);
-    border-radius: 5px;
-
+.navbar {
+    box-shadow: 3px 3px 4px gray;
+    /* position: fixed;
+    width: 80%;
+    margin: 12px auto 0 auto; */
 }
-.border:hover{
-    cursor: url('../assets/download-cursor.png'),pointer ;
-}
-
-
-

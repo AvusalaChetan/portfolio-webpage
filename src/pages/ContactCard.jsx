@@ -50,7 +50,7 @@ const ContactCard = () => {
         }}
       >
         <Card style={{width: "75%"}}>
-          <Space direction="vertical" size="large" style={{width: "100%"}}>
+          <Space orientation="vertical" size="large" style={{width: "100%"}}>
             <Typography.Title
               level={2}
               style={{textAlign: "center", margin: 0}}
@@ -60,7 +60,7 @@ const ContactCard = () => {
 
             <Divider style={{borderColor: "#444", margin: "12px 0 3px"}} />
 
-            <Space direction="vertical" size="middle" style={{width: "100%"}}>
+            <Space orientation="vertical" size="middle" style={{width: "100%"}}>
               <Typography.Title level={4}>Name</Typography.Title>
               <Typography.Paragraph copyable>
                 {myContactInfo.name}

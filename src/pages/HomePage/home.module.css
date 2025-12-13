@@ -1,16 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Vinyl&display=swap');
 
+.hello{
+
+}
 .name {
-  display: inline-block;    /* prevents transform from affecting surrounding flow */
+  display: block;
   transform-origin: center center;
   will-change: transform;
-  /* keep your stroke/fill rules as before */
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: white;
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: black;
-  font-family:"Anton", "Rubik Vinyl", system-ui;
+  /* -webkit-text-stroke-color: #9333ea;  */
+  font-family: "Anton", "Rubik Vinyl", system-ui;
   font-weight: 400;
   font-style: normal;
   font-size: 10rem;
+
+}
+
+
+.name {
+  font-size: 2.5rem; /* base mobile size */
+}
+
+@media (min-width: 640px) { /* sm */
+  .home{
+    height: 50vh;
+  }
+  .name {
+    font-size:4rem;
+  }
+}
+@media (min-width: 768px) { /* md */
+  .name {
+    font-size: 6rem;
+  }
+}
+@media (min-width: 1024px) { /* lg */
+  .name {
+    font-size: 8rem;
+  }
+}
+@media (min-width: 1280px) { /* xl */
+  .name {
+    font-size: 10rem;
+  }
 }

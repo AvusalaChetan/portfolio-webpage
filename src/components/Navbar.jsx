@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import { useLocation} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {HoverBehaviour} from "../animations/Cursor";
 import {MdOutlineFileDownload} from "react-icons/md";
 import {FiMenu, FiX} from "react-icons/fi";
@@ -12,6 +12,9 @@ import {
   Menu,
   Flex,
 } from "antd";
+import {motion} from "framer-motion";
+import TextBasedAnimation from "../animations/TextBasedAnimation";
+import styles from "./Navbar.module.css";
 
 const dropdown = [
   {
@@ -76,53 +79,65 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-16  ">
-        <HoverBehaviour scale={4.5} border={"1px outset red"}>
+      <div
+        className={`${styles.navbar} max-w-7xl bg-white mx-auto my-3 border  flex items-center justify-between h-16  rounded-2xl px-12`}
+      >
+        <HoverBehaviour scale={3} border={"1px outset red"}>
           <Typography.Title level={2}>
-            <a
-              href="/"
-              className="tracking-wide text-purple-800!  md:text-2xl font-bold ml-6 "
-            >
-              Portfolio
+            <a href="/">
+              <TextBasedAnimation
+                text={"Portfolio"}
+                textColor={"text-purple-800!"}
+                className={
+                  " md:text-2xl font-bold  mt-3  flex items-center justify-center "
+                }
+              />
             </a>
           </Typography.Title>
         </HoverBehaviour>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-6">
-          <HoverBehaviour scale={2.8} border={"1px solid red"}>
-            <Anchor
-              style={{
-                fontSize: "18px",
-                textTransform: "capitalize",
+        <motion.div
+          initial={{opacity: 0, y: 30, scale: 0.95}}
+          animate={{opacity: 1, y: 0, scale: 1}}
+          transition={{duration: 0.7, ease: "easeOut", delay: 0.2}}
+        >
+          <nav className="hidden md:flex items-center gap-6">
+            <HoverBehaviour scale={1.2}>
+              <Anchor
+                style={{
+                  fontSize: "18px",
+                  textTransform: "capitalize",
+                  color: "#9333ea",
+                }}
+                direction="horizontal"
+                items={[
+                  {key: "home", title: "home", href: "#home"},
+                  {key: "about", title: "about", href: "#about"},
+                  {key: "skills", title: "skills", href: "#skills"},
+                  {key: "projects", title: "projects", href: "#projects"},
+                ]}
+              />
+            </HoverBehaviour>
+            <Dropdown menu={{items: dropdown}}>connect</Dropdown>
+            <Button
+              onClick={downloadResume}
+              type="dashed"
+              icon={<MdOutlineFileDownload />}
+              className="hover:border-black! hover:text-black!"
+              onMouseEnter={() => {
+                const cursor = document.getElementById("cursor");
+                if (cursor) cursor.style.opacity = "0";
               }}
-              direction="horizontal"
-              items={[
-                {key: "home", title: "home", href: "#home"},
-                {key: "about", title: "about", href: "#about"},
-                {key: "skills", title: "skills", href: "#skills"},
-                {key: "projects", title: "projects", href: "#projects"},
-              ]}
-            />
-          </HoverBehaviour>
-          <Dropdown menu={{items: dropdown}}>connect</Dropdown>
-          <Button
-            onClick={downloadResume}
-            type="dashed"
-            icon={<MdOutlineFileDownload />}
-            className="hover:border-black! hover:text-black!"
-            onMouseEnter={() => {
-              const cursor = document.getElementById("cursor");
-              if (cursor) cursor.style.opacity = "0";
-            }}
-            onMouseLeave={() => {
-              const cursor = document.getElementById("cursor");
-              if (cursor) cursor.style.opacity = "1";
-            }}
-          >
-            Resume
-          </Button>
-        </nav>
+              onMouseLeave={() => {
+                const cursor = document.getElementById("cursor");
+                if (cursor) cursor.style.opacity = "1";
+              }}
+            >
+              Resume
+            </Button>
+          </nav>
+        </motion.div>
 
         {/* Mobile controls */}
         <div className="md:hidden flex items-center gap-3 mr-2">

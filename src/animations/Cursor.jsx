@@ -10,8 +10,8 @@ const Cursor = () => {
       const {clientX, clientY} = event;
 
       gsap.to(cursorRef.current, {
-        x: clientX-1,
-        y: clientY-60,
+        x: clientX+5,
+        y: clientY-100+10,
         xPercent: -50,
         yPercent: -50,
         duration: 0.5,
@@ -19,8 +19,8 @@ const Cursor = () => {
       });
 
       gsap.to(cursorDotRef.current, {
-        x: clientX-1,
-        y: clientY-60,
+        x: clientX+5,
+        y: clientY-100+10,
         xPercent: -50,
         yPercent: -50,
         duration: 0.1,
@@ -44,7 +44,7 @@ const Cursor = () => {
 
       <div
         ref={cursorDotRef}
-        className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-999"
+        className="fixed w-2 h-2 bg-white rounded-full pointer-events-none mix-blend-difference z-999"
       />
     </>
   );

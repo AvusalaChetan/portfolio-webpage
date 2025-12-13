@@ -1,80 +1,80 @@
 [
   {
     "_id": 1,
-    "skill": "HTML",
+    "name": "HTML",
     "icon": "/html.png",
     "type": "language"
   },
   {
     "_id": 2,
-    "skill": "CSS",
+    "name": "CSS",
     "icon": "/css-3.png",
     "type": "language"
   },
   {
     "_id": 3,
-    "skill": "JavaScript",
+    "name": "JavaScript",
     "icon": "/js.png",
     "type": "language"
   },
   {
     "_id": 4,
-    "skill": "MongoDB",
+    "name": "MongoDB",
     "icon": "/mongoDB.jpg",
     "type": "database"
   },
   {
     "_id": 5,
-    "skill": "Express.js",
+    "name": "Express.js",
     "icon": "/expressjs.png",
     "type": "framework"
   },
   {
     "_id": 6,
-    "skill": "React.js",
+    "name": "React.js",
     "icon": "/react.png",
     "type": "framework"
   },
   {
     "_id": 7,
-    "skill": "Node.js",
+    "name": "Node.js",
     "icon": "/nodejs.png",
     "type": "runtime"
   },
   {
     "_id": 8,
-    "skill": "GSAP",
+    "name": "GSAP",
     "icon": "/gsap.webp",
     "type": "animation"
   },
   {
     "_id": 9,
-    "skill": "Framer Motion",
+    "name": "Framer Motion",
     "icon": "/fm.webp",
     "type": "animation"
   },
   {
     "_id": 10,
-    "skill": "Git",
+    "name": "Git",
     "icon": "/git.png",
     "type": "vcs"
   },
   {
     "_id": 11,
-    "skill": "GitHub",
+    "name": "GitHub",
     "icon": "/github.png",
     "type": "vcs"
   },
   {
     "_id": 12,
-    "skill": "C++",
+    "name": "C++",
     "icon": "/c-.png",
     "type": "ece",
     "note": "firmware basics"
   },
   {
     "_id": 13,
-    "skill": "Arduino Uno",
+    "name": "Arduino Uno",
     "icon": "/arduino_board.png",
     "type": "ece",
     "note": "Arduino programming (C/C++)"
