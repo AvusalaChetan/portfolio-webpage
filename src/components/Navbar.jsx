@@ -138,12 +138,12 @@ const Navbar = () => {
       </div>
 
       {/* Mobile menu */}
-      {mobileOpen && <MobileNavbar hash={hash} setMobileOpen={setMobileOpen} />}
+      {mobileOpen && <MobileNavbar  setMobileOpen={setMobileOpen} />}
     </>
   );
 };
 
-const MobileNavbar = ({hash, setMobileOpen}) => {
+const MobileNavbar = ({ setMobileOpen}) => {
   const menuItems = navRought.map((item) => ({
     key: item.to,
     label: (
@@ -191,7 +191,7 @@ const MobileNavbar = ({hash, setMobileOpen}) => {
           }}
         >
           <Menu
-            selectedKeys={[hash || "#home"]}
+            selectedKeys={["#home"]}
             mode="inline"
             items={menuItems}
             style={{

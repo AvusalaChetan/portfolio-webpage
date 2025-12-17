@@ -1,7 +1,14 @@
 @import "tailwindcss";
 
-body{
-    cursor: none;
+html,
+body {
+    height: 100%;
+    margin: 0;
 }
-html, body { height: 100%; margin: 0; }
 
+
+
+body {
+    cursor: none;
+    scroll-behavior: smooth;
+}
