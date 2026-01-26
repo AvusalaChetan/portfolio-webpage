@@ -1,0 +1,12 @@
+ [
+    {
+      "title": "LinkedIn",
+      "link": "https:www.linkedin.com/in/avusala-chetan-73a697312",
+      "icon": "<FaLinkedinIn />"
+    },
+    {
+      "title": "GitHub",
+      "link": "https://github.com/AvusalaChetan",
+      "icon": "<FaGithub />"
+    }
+  ]
