@@ -1,0 +1,106 @@
+[
+  {
+    "name": "MongoDB",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+    "bgRounded": false,
+    "category": "backend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "Express",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
+    "bgRounded": true,
+    "category": "backend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "React",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+    "bgRounded": false,
+    "category": "frontend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "Node.js",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+    "bgRounded": false,
+    "category": "backend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "Socket.io",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/socketio/socketio-original.svg",
+    "bgRounded": true,
+    "category": "backend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "HTML5",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+    "bgRounded": false,
+    "category": "frontend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "CSS3",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+    "bgRounded": false,
+    "category": "frontend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "JavaScript",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+    "bgRounded": false,
+    "category": "language",
+    "isSoftSkill": false
+  },
+  {
+    "name": "TypeScript",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+    "bgRounded": false,
+    "category": "language",
+    "isSoftSkill": false
+  },
+  {
+    "name": "C",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+    "bgRounded": false,
+    "category": "language",
+    "isSoftSkill": false
+  },
+  {
+    "name": "Redux",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg",
+    "bgRounded": false,
+    "category": "frontend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "MUI",
+    "icon": "https://raw.githubusercontent.com/devicons/devicon/master/icons/materialui/materialui-original.svg",
+    "bgRounded": false,
+    "category": "frontend",
+    "isSoftSkill": false
+  },
+  {
+    "name": "Communication",
+    "category": "softskills",
+    "isSoftSkill": true
+  },
+  {
+    "name": "Problem Solving",
+    "category": "softskills",
+    "isSoftSkill": true
+  },
+  {
+    "name": "Teamwork",
+    "category": "softskills",
+    "isSoftSkill": true
+  },
+  {
+    "name": "Adaptability",
+    "category": "softskills",
+    "isSoftSkill": true
+  }
+]

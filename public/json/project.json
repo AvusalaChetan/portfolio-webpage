@@ -1,9 +1,8 @@
-[ 
+[
   {
-    "id": 4,
+    "id": 1,
     "title": "Weather  App",
     "description": "A clean and intuitive weather application with location-based forecasts and interactive maps.",
-    "fullDescription": "Built a responsive weather application that ides detailed weather forecasts, interactive weather maps, hourly and weekly predictions, and location-based weather alerts using multiple weather APIs.",
     "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800",
     "technologies": ["HTML", "CSS3", "OpenWeather API"],
     "category": "frontend",
@@ -17,6 +16,63 @@
       "Integration with OpenWeather API",
       "Geolocation-based weather",
       "current weather is display"
+    ]
+  },
+
+  {
+    "id": 2,
+    "title": "express-jetstart CLI",
+    "description": "A high-performance command-line interface for rapid Express.js project scaffolding with pre-configured architecture.",
+    "image": "/images/cliProject.png",
+    "technologies": [
+      "Node.js",
+      "TypeScript",
+      "Commander.js",
+      "Inquirer",
+      "Chalk"
+    ],
+    "category": "Backend / DevTools",
+    "demoUrl": "https://www.npmjs.com/package/express-jetstart",
+    "githubUrl": "https://github.com/AvusalaChetan/express-jetstart-CLI",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2024-04",
+    "endDate": "2024-05",
+    "highlights": [
+      "Automated boilerplate generation with clean MVC architecture",
+      "Interactive terminal UI using Inquirer.js for project customization",
+      "Support for both JavaScript and TypeScript configurations",
+      "Integrated error handling and real-time installation feedback"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Agentic Support Hub",
+    "description": "Agentic Support Hub: is an advanced, real-time AI-powered customer support platform tailored for food delivery services. It enables fast, efficient communication between customers and support agents through live chat, intelligent order tracking, automated refund processing, and comprehensive user history management.",
+    "image": "/images/Agentic-Support-Hub.png",
+    "technologies": [
+      "MongoDB",
+      "Node.js",
+      "React.js",
+      "Express.js",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Vercel"
+    ],
+    "category": "FullStack",
+    "demoUrl": "https://agentic-support-hub.vercel.app/",
+    "githubUrl": "https://github.com/AvusalaChetan/Agentic-Support-Hub",
+    "featured": true,
+    "status": "completed",
+    "startDate": "2024-04",
+    "endDate": "2024-05",
+    "highlights": [
+      "AI Agent integration using Grok (GROQ SDK) with Function Calling",
+      "Real-time AI reasoning transparency",
+      "Automated refund processing based on custom business logic (45-minute rule)",
+      "Real-time communication and driver tracking using Socket.io",
+      "Full-stack implementation with React 19, TypeScript, and MongoDB"
     ]
   }
 ]

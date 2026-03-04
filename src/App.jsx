@@ -24,7 +24,6 @@ const App = () => {
       className="bg-black/10 h-screen w-screen overflow-x-hidden"
     >
       <Navbar />
-
       <Music />
       <Suspense fallback={<>showing ....</>}>
         <section id="home">

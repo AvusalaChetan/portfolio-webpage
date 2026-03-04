@@ -1,108 +1,225 @@
-import {useGSAP} from "@gsap/react";
 import gsap from "gsap";
-import {useEffect, useState} from "react";
-import "./Navbar.css";
+import { useGSAP } from "@gsap/react";
+import { useState, useRef } from "react";
+
+const navItems = [
+  { id: 1, name: "Home",     href: "#home" },
+  { id: 2, name: "About",    href: "#about" },
+  { id: 3, name: "Skills",   href: "#skills" },
+  { id: 4, name: "Projects", href: "#projects" },
+  { id: 5, name: "Connect",  href: "#connect" },
+];
 
 const Navbar = () => {
-  const [routes] = useState([
-    {name: "home", to: "/"},
-    {name: "about", to: "#about"},
-    {name: "skills", to: "#skills"},
-    {name: "projects", to: "#projects"},
-    {name: "connect", to: "#connect"},
-  ]);
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const overlayRef   = useRef(null);
+  const navItemsRef  = useRef([]);
+  const linesRef     = useRef([]);
+  const numberRefs   = useRef([]);
+  const tlRef        = useRef(null);
+  const burgerRef    = useRef(null);
+  const bar1         = useRef(null);
+  const bar2         = useRef(null);
+  const bar3         = useRef(null);
+
+  const bars = [bar1, bar2, bar3];
 
   useGSAP(() => {
-    gsap.from(".nav-link", {
-      y: -50,
-      delay: 0.2,
-      stagger: 0.2,
-      ease: "elastic.inOut",
-    });
+    gsap.set(overlayRef.current, { autoAlpha: 0, display: "none" });
+    gsap.set(navItemsRef.current, { y: 60, opacity: 0 });
+    gsap.set(linesRef.current,    { scaleX: 0, transformOrigin: "left center" });
+    gsap.set(numberRefs.current,  { opacity: 0, x: -10 });
+
+    const tl = gsap.timeline({ paused: true });
+
+    // Overlay slides up from bottom
+    tl.to(overlayRef.current, {
+      display: "flex",
+      autoAlpha: 1,
+      duration: 0.01,
+    })
+    .fromTo(overlayRef.current, {
+      clipPath: "inset(100% 0% 0% 0%)",
+    }, {
+      clipPath: "inset(0% 0% 0% 0%)",
+      duration: 0.65,
+      ease: "expo.inOut",
+    })
+    // Burger → X morph
+    .to(bar1.current, { y: 8,  rotation: 45,  duration: 0.3, ease: "power2.out" }, "<")
+    .to(bar2.current, { opacity: 0, scaleX: 0, duration: 0.2 }, "<")
+    .to(bar3.current, { y: -8, rotation: -45, duration: 0.3, ease: "power2.out" }, "<")
+    // Nav items stagger up
+    .to(navItemsRef.current, {
+      y: 0, opacity: 1,
+      duration: 0.6, stagger: 0.08,
+      ease: "expo.out",
+    }, "-=0.2")
+    // Underlines draw
+    .to(linesRef.current, {
+      scaleX: 1,
+      duration: 0.4, stagger: 0.07,
+      ease: "power3.out",
+    }, "-=0.45")
+    // Numbers fade in
+    .to(numberRefs.current, {
+      opacity: 1, x: 0,
+      duration: 0.3, stagger: 0.07,
+      ease: "power2.out",
+    }, "-=0.5");
+
+    tlRef.current = tl;
   }, []);
 
-  // Lock body scroll when menu is open
-  useEffect(() => {
-    document.body.style.overflow = sidebarOpen ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [sidebarOpen]);
+  const handleOpen = () => {
+    setOpen(true);
+    tlRef.current?.play();
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+    tlRef.current?.reverse();
+  };
+
+  // Hover: item text color + line brightness
+  const handleItemEnter = (i) => {
+    gsap.to(navItemsRef.current[i], { x: 12, duration: 0.3, ease: "power2.out" });
+    gsap.to(linesRef.current[i],    { opacity: 1, duration: 0.2 });
+  };
+  const handleItemLeave = (i) => {
+    gsap.to(navItemsRef.current[i], { x: 0,  duration: 0.4, ease: "elastic.out(1,0.5)" });
+    gsap.to(linesRef.current[i],    { opacity: 0.25, duration: 0.3 });
+  };
 
   return (
-    <nav className="h-14 w-full flex justify-between items-center z-60 md:p-8 pt-2 md:pt-10 font-cabinetGrotesk bg-white/80 shadow-sm fixed top-0 left-0">
-      <div className="font-bold text-2xl tracking-tight flex items-center select-none">
-        <span className="font-mono text-4xl pl-2">Avusala Chetan</span>
-      </div>
-
-      {/* Desktop Nav */}
-      <div className="hidden md:flex items-center gap-7 mr-6">
-        {routes.map((item) => (
-          <a
-            key={item.name}
-            className="nav-link hover:cursor-pointer"
-            href={item.to}
-          >
-            {item.name}
-          </a>
-        ))}
-      </div>
-
-      <button
-        className="md:hidden flex items-center px-3 py-2   text-black  mr-4"
-        onClick={() => setSidebarOpen(true)}
-        aria-label="Open menu"
+    <>
+      {/* ── Top bar ─────────────────────────────────────────── */}
+      <nav
+        className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-8 lg:px-16 h-16"
+        style={{
+          background: "rgba(8,8,16,0.75)",
+          backdropFilter: "blur(16px)",
+          borderBottom: "1px solid rgba(255,255,255,0.06)",
+          fontFamily: "'Courier New', monospace",
+        }}
       >
-        <svg
-          className="fill-current h-6 w-6"
-          viewBox="0 0 20 20"
-          xmlns="http://www.w3.org/2000/svg"
+        {/* Logo */}
+        <a
+          href="#home"
+          className="text-white font-black select-none"
+          style={{
+            fontFamily: "Georgia, serif",
+            fontStyle: "italic",
+            fontSize: "clamp(1rem, 2vw, 1.3rem)",
+            letterSpacing: "-0.02em",
+          }}
+          onMouseEnter={(e) => gsap.to(e.currentTarget, { letterSpacing: "0.02em", duration: 0.4, ease: "power2.out" })}
+          onMouseLeave={(e) => gsap.to(e.currentTarget, { letterSpacing: "-0.02em", duration: 0.4, ease: "power2.out" })}
         >
-          <path
-            fillRule="evenodd"
-            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-            clipRule="evenodd"
-          />
-        </svg>
-      </button>
+          A. Chetan
+        </a>
 
-      {/* Top sheet for Mobile */}
-      {sidebarOpen && (
-        <div className="fixed inset-0 z-50">
-          {/* Backdrop */}
-          <div
-            className="absolute inset-0 bg-black/40"
-            onClick={() => setSidebarOpen(false)}
-          />
+        {/* Burger button */}
+        <button
+          ref={burgerRef}
+          onClick={open ? handleClose : handleOpen}
+          className="relative flex flex-col justify-center items-center w-10 h-10 gap-0 cursor-pointer"
+          aria-label="Toggle menu"
+        >
+          {bars.map((ref, i) => (
+            <span
+              key={i}
+              ref={ref}
+              className="block rounded-full"
+              style={{
+                width: i === 1 ? 20 : 28,
+                height: 1.5,
+                background: "rgba(255,255,255,0.85)",
+                marginBottom: i < 2 ? 6 : 0,
+                transformOrigin: "center",
+              }}
+            />
+          ))}
+        </button>
+      </nav>
 
-          {/* Top dropdown panel */}
-          <div className="absolute top-0 left-0 w-full bg-white shadow-lg px-6 pt-5 pb-6 top-sheet md:hidden">
-            <div className="flex items-center justify-end">
-              <button
-                className="text-2xl text-black hover:opacity-80"
-                onClick={() => setSidebarOpen(false)}
-                aria-label="Close menu"
+      {/* ── Full-screen overlay ──────────────────────────────── */}
+      <div
+        ref={overlayRef}
+        className="fixed inset-0 z-40 flex items-center justify-center"
+        style={{
+          background: "linear-gradient(135deg, #080810 0%, #0c0c18 100%)",
+          fontFamily: "'Courier New', monospace",
+        }}
+      >
+        {/* Subtle grid */}
+        <div
+          className="absolute inset-0 pointer-events-none"
+          style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px)`,
+            backgroundSize: "48px 48px",
+          }}
+        />
+
+        {/* Nav list */}
+        <ul className="relative z-10 flex flex-col gap-2 w-full max-w-lg px-12">
+          {navItems.map((item, i) => (
+            <li key={item.id} className="overflow-hidden">
+              <div
+                ref={(el) => (navItemsRef.current[i] = el)}
+                className="relative py-4 cursor-pointer group"
+                onMouseEnter={() => handleItemEnter(i)}
+                onMouseLeave={() => handleItemLeave(i)}
               >
-                &times;
-              </button>
-            </div>
-            <nav className="mt-2 flex flex-col gap-3">
-              {routes.map((item) => (
+                {/* Index number */}
+                <span
+                  ref={(el) => (numberRefs.current[i] = el)}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 text-[10px] uppercase tracking-[0.3em]"
+                  style={{ color: "rgba(255,255,255,0.2)" }}
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+
+                {/* Link text */}
                 <a
-                  key={item.name}
-                  className="nav-link text-lg"
-                  href={item.to}
-                  onClick={() => setSidebarOpen(false)}
+                  href={item.href}
+                  onClick={handleClose}
+                  className="block pl-10 text-white font-black leading-none"
+                  style={{
+                    fontSize: "clamp(2rem, 7vw, 4.5rem)",
+                    fontFamily: "Georgia, serif",
+                    fontStyle: "italic",
+                    letterSpacing: "-0.02em",
+                  }}
                 >
                   {item.name}
                 </a>
-              ))}
-            </nav>
-          </div>
+
+                {/* Underline */}
+                <div
+                  ref={(el) => (linesRef.current[i] = el)}
+                  className="absolute bottom-0 left-0 right-0 h-px"
+                  style={{
+                    background: "linear-gradient(90deg, rgba(16,185,129,0.6), rgba(124,58,237,0.4), transparent)",
+                    opacity: 0.25,
+                  }}
+                />
+              </div>
+            </li>
+          ))}
+        </ul>
+
+        {/* Bottom label */}
+        <div
+          className="absolute bottom-8 left-0 right-0 flex justify-between px-12 text-[10px] uppercase tracking-[0.35em]"
+          style={{ color: "rgba(255,255,255,0.15)" }}
+        >
+          <span>Portfolio 2026</span>
+          <span>AI · MERN Dev</span>
         </div>
-      )}
-    </nav>
+      </div>
+    </>
   );
 };
 
