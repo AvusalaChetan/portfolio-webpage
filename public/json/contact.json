@@ -1,12 +1,30 @@
- [
-    {
-      "title": "LinkedIn",
-      "link": "https:www.linkedin.com/in/avusala-chetan-73a697312",
-      "icon": "<FaLinkedinIn />"
-    },
-    {
-      "title": "GitHub",
-      "link": "https://github.com/AvusalaChetan",
-      "icon": "<FaGithub />"
-    }
-  ]
+[
+  {
+    "id": "email",
+    "label": "Email",
+    "value": "avusalachetan@gmail.com",
+    "href": "mailto:avusalachetan@gmail.com",
+    "iconName": "FaEnvelope"
+  },
+  {
+    "id": "linkedin",
+    "label": "LinkedIn",
+    "value": "in/avusalachetan",
+    "href": "https://linkedin.com/in/avusalachetan",
+    "iconName": "FaLinkedin"
+  },
+  {
+    "id": "github",
+    "label": "GitHub",
+    "value": "AvusalaChetan",
+    "href": "https://github.com/AvusalaChetan",
+    "iconName": "FaGithub"
+  },
+  {
+    "id": "location",
+    "label": "Location",
+    "value": "Hyderabad, India",
+    "href": null,
+    "iconName": "FaMapPin"
+  }
+]

@@ -1,0 +1,19 @@
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    .desktop-nav {
+      display: flex !important;
+    }
+
+    .burger-btn {
+      display: none !important;
+    }
+
+    @media (max-width: 768px) {
+      .desktop-nav {
+        display: none !important;
+      }
+
+      .burger-btn {
+        display: flex !important;
+      }
+    }

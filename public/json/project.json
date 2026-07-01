@@ -1,15 +1,11 @@
 [
   {
-    "id": 1,
-    "title": "Weather  App",
+    "name": "Weather App",
     "description": "A clean and intuitive weather application with location-based forecasts and interactive maps.",
     "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800",
     "technologies": ["HTML", "CSS3", "OpenWeather API"],
-    "category": "frontend",
-    "demoUrl": "https://darling-meringue-393b73.netlify.app/",
+    "liveLink": "https://darling-meringue-393b73.netlify.app/",
     "githubUrl": "https://github.com/AvusalaChetan/Weather-app",
-    "featured": true,
-    "status": "completed",
     "startDate": "2024-04",
     "endDate": "2024-04",
     "highlights": [
@@ -18,10 +14,8 @@
       "current weather is display"
     ]
   },
-
   {
-    "id": 2,
-    "title": "express-jetstart CLI",
+    "name": "express-jetstart CLI",
     "description": "A high-performance command-line interface for rapid Express.js project scaffolding with pre-configured architecture.",
     "image": "/images/cliProject.png",
     "technologies": [
@@ -31,11 +25,8 @@
       "Inquirer",
       "Chalk"
     ],
-    "category": "Backend / DevTools",
-    "demoUrl": "https://www.npmjs.com/package/express-jetstart",
+    "liveLink": "https://www.npmjs.com/package/express-jetstart",
     "githubUrl": "https://github.com/AvusalaChetan/express-jetstart-CLI",
-    "featured": true,
-    "status": "completed",
     "startDate": "2024-04",
     "endDate": "2024-05",
     "highlights": [
@@ -43,11 +34,11 @@
       "Interactive terminal UI using Inquirer.js for project customization",
       "Support for both JavaScript and TypeScript configurations",
       "Integrated error handling and real-time installation feedback"
-    ]
+    ],
+    "bage":true
   },
   {
-    "id": 3,
-    "title": "Agentic Support Hub",
+    "name": "Agentic Support Hub",
     "description": "Agentic Support Hub: is an advanced, real-time AI-powered customer support platform tailored for food delivery services. It enables fast, efficient communication between customers and support agents through live chat, intelligent order tracking, automated refund processing, and comprehensive user history management.",
     "image": "/images/Agentic-Support-Hub.png",
     "technologies": [
@@ -60,11 +51,8 @@
       "Tailwind CSS",
       "Vercel"
     ],
-    "category": "FullStack",
-    "demoUrl": "https://agentic-support-hub.vercel.app/",
+    "liveLink": "https://agentic-support-hub.vercel.app/",
     "githubUrl": "https://github.com/AvusalaChetan/Agentic-Support-Hub",
-    "featured": true,
-    "status": "completed",
     "startDate": "2024-04",
     "endDate": "2024-05",
     "highlights": [

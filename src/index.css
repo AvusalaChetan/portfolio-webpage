@@ -1,13 +1,75 @@
 @import "tailwindcss";
 
-body {
+:root {
+  /* Backgrounds */
+  --bg: #0d0d0d;
+  --bg-2: #111111;
+  --bg-3: #161616;
+  --bg-card: #131313;
+
+  /* Borders */
+  --border: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(201, 146, 42, 0.4);
+
+  /* Accent — Gold */
+  --accent: #c9922a;
+  --accent-light: #d4a843;
+  --accent-dim: rgba(201, 146, 42, 0.15);
+  --accent-glow: rgba(201, 146, 42, 0.08);
+
+  /* Text */
+  --text: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.35);
+  --text-faint: rgba(255, 255, 255, 0.12);
+
+  /* Status */
+  --green: #22c55e;
+  --green-dim: rgba(34, 197, 94, 0.15);
+
+  /* Fonts */
+  --font-sans: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Spacing scale */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition: 0.2s ease;
+  --transition-slow: 0.4s ease;
+}
+/* Ensure these are in your global CSS file */
+@layer base {
+  p {
+    font-family: var(--font-sans);
+  }
+}
+
+html {
   scroll-behavior: smooth;
-  background: #080810;
+}
+
+body {
+  background: var(--bg-2);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(16, 185, 129, 0.4) rgba(255, 255, 255, 0.03);
+  scrollbar-color: rgba(201, 146, 42, 0.4) rgba(255, 255, 255, 0.03);
 }
 
 ::-webkit-scrollbar {
@@ -21,14 +83,136 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #10b981 0%, #7c3aed 50%, #0ea5e9 100%);
+  background: linear-gradient(180deg, var(--accent) 0%, #8b6518 100%);
   border-radius: 100px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #34d399 0%, #a78bfa 50%, #38bdf8 100%);
+  background: linear-gradient(
+    180deg,
+    var(--accent-light) 0%,
+    var(--accent) 100%
+  );
 }
 
 ::-webkit-scrollbar-corner {
   background: transparent;
+}
+
+/* ── Selection ────────────────────────────────────────────────── */
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
+
+/* ── Utility classes ──────────────────────────────────────────── */
+.font-mono {
+  font-family: var(--font-mono);
+}
+.font-sans {
+  font-family: var(--font-sans);
+}
+.text-accent {
+  color: var(--accent);
+}
+.text-muted {
+  color: var(--text-muted);
+}
+.text-faint {
+  color: var(--text-faint);
+}
+
+.section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.sec-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.sec-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--transition);
+}
+
+.card:hover {
+  border-color: var(--border-hover);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.btn-primary:hover {
+  opacity: 0.85;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 10px 22px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  font-family: var(--font-sans);
+  cursor: pointer;
+  transition: border-color var(--transition);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+}
+
+/* ── Animations ───────────────────────────────────────────────── */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

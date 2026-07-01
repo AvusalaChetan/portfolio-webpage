@@ -1,47 +1,26 @@
-import {lazy, Suspense, useState} from "react";
 import Navbar from "./components/navbar/Navbar";
-import Loading from "./pages/Loading";
-import Music from "./components/Music";
+import HomePage from "./pages/HomePage";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Askme from "./pages/Askme";
+import Contact from "./pages/Contact";
+import Music from './components/Music'
 
-const HomePage = lazy(() => import("./pages/HomePage"));
-const About = lazy(() => import("./pages/About"));
-const Skills = lazy(() => import("./pages/Skills"));
-const Projects = lazy(() => import("./pages/Projects"));
-const Connect = lazy(() => import("./pages/Connect"));
+
 
 const App = () => {
-  const [isLoading, setisLoading] = useState(true);
-
-  setTimeout(() => {
-    setisLoading(false);
-  }, 4000);
-
-  if (isLoading) return <Loading></Loading>;
-
   return (
-    <main
-      style={{scrollBehavior: "smooth"}}
-      className="bg-black/10 h-screen w-screen overflow-x-hidden"
-    >
+    <main className="min-h-screen w-full flex flex-col items-center justify-start bg-(--bg-2)">
       <Navbar />
-      <Music />
-      <Suspense fallback={<>showing ....</>}>
-        <section id="home">
-          <HomePage />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="connect">
-          <Connect />
-        </section>
-      </Suspense>
+
+      <div className="w-full max-w-5xl lg:max-w-4xl h-screen  px-4 md:px-8 py-6">
+        <HomePage />
+        <Skills />
+        <Projects />
+        <Askme />
+        <Contact />
+      </div>
+        <Music/>
     </main>
   );
 };
