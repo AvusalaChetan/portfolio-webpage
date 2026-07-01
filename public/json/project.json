@@ -1,20 +1,5 @@
 [
   {
-    "name": "Weather App",
-    "description": "A clean and intuitive weather application with location-based forecasts and interactive maps.",
-    "image": "https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800",
-    "technologies": ["HTML", "CSS3", "OpenWeather API"],
-    "liveLink": "https://darling-meringue-393b73.netlify.app/",
-    "githubUrl": "https://github.com/AvusalaChetan/Weather-app",
-    "startDate": "2024-04",
-    "endDate": "2024-04",
-    "highlights": [
-      "Integration with OpenWeather API",
-      "Geolocation-based weather",
-      "current weather is display"
-    ]
-  },
-  {
     "name": "express-jetstart CLI",
     "description": "A high-performance command-line interface for rapid Express.js project scaffolding with pre-configured architecture.",
     "image": "/images/cliProject.png",
@@ -27,15 +12,15 @@
     ],
     "liveLink": "https://www.npmjs.com/package/express-jetstart",
     "githubUrl": "https://github.com/AvusalaChetan/express-jetstart-CLI",
-    "startDate": "2024-04",
-    "endDate": "2024-05",
+    "startDate": "2026-02",
+    "endDate": "2026-03",
     "highlights": [
-      "Automated boilerplate generation with clean MVC architecture",
-      "Interactive terminal UI using Inquirer.js for project customization",
-      "Support for both JavaScript and TypeScript configurations",
-      "Integrated error handling and real-time installation feedback"
+      "Scaffolds production-ready Express.js projects with MVC architecture in seconds via a single CLI command",
+      "Interactive prompts (Inquirer.js) let developers configure module system (ESM/CommonJS) and language before generation",
+      "Dual-language support: generates fully typed TypeScript or vanilla JavaScript boilerplate from one codebase",
+      "Published on npm with 500+ downloads across 4 versioned releases"
     ],
-    "bage":true
+    "bage": true
   },
   {
     "name": "Agentic Support Hub",
@@ -53,8 +38,8 @@
     ],
     "liveLink": "https://agentic-support-hub.vercel.app/",
     "githubUrl": "https://github.com/AvusalaChetan/Agentic-Support-Hub",
-    "startDate": "2024-04",
-    "endDate": "2024-05",
+    "startDate": "2026-06",
+    "endDate": "2026-07",
     "highlights": [
       "AI Agent integration using Grok (GROQ SDK) with Function Calling",
       "Real-time AI reasoning transparency",

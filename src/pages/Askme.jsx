@@ -38,10 +38,10 @@ const Askme = () => {
           assistant answers on my behalf.
         </p>
       </div>
-      <SqureBage className="inline-flex w-fit items-center gap-2 rounded-xs border  border-amber-500/30 bg-[rgba(214,182,3,0.06)] px-3 py-1 text-[13px] font-mono font-medium text-amber-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200 ">
+      {/* <SqureBage className="inline-flex w-fit items-center gap-2 rounded-xs border  border-amber-500/30 bg-[rgba(214,182,3,0.06)] px-3 py-1 text-[13px] font-mono font-medium text-amber-400 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-200 ">
         Note: If the AI Assistant is unavailable or not responding, the backend
         services may be temporarily paused. Please try again later
-      </SqureBage>
+      </SqureBage> */}
 
       <div className="w-full   h-[600px] m-auto  overflow-hidden shadow-inner transition-colors duration-200 focus-within:border-[var(--accent)] ">
         {shouldLoad ? (

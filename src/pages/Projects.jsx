@@ -59,8 +59,6 @@ const ProjectCard = ({ project }) => {
           <h3 className="font-sans text-xl font-bold tracking-tight text-white">
             {name}
           </h3>
-
-          {/* Action Links using Font Awesome */}
           <div className="flex items-center gap-3 text-lg text-[rgba(255,255,255,0.35)]">
             {liveLink && (
               <a href={liveLink} target="_blank" rel="noopener noreferrer">
@@ -85,6 +83,16 @@ const ProjectCard = ({ project }) => {
         <p className="font-sans text-sm leading-relaxed text-[rgba(255,255,255,0.65)]">
           {description}
         </p>
+        <ul className="flex flex-col gap-3 list-none  ">
+          {highlights.map((p, idx) => (
+            <li
+              key={idx}
+              className=" text-[color:var(--text)] text-sm leading-relaxed"
+            > 
+              <span className="text-(--text-muted)">{p}</span>
+            </li>
+          ))}
+        </ul>
         <div className="flex flex-wrap gap-2 mt-2">
           {technologies.map((tech, index) => (
             <span

@@ -69,7 +69,7 @@ const HomePage = () => {
                 and real-time features. Published an open-source CLI tool on
                 npm.
               </p>
-              <p>Currently in 2nd year B.Tech, ECE — Hyderabad.</p>
+              <p>Currently in final year B.Tech, ECE — Hyderabad.</p>
             </div>
           </div>
 
