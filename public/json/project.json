@@ -21,31 +21,5 @@
       "Published on npm with 500+ downloads across 4 versioned releases"
     ],
     "bage": true
-  },
-  {
-    "name": "Agentic Support Hub",
-    "description": "Agentic Support Hub: is an advanced, real-time AI-powered customer support platform tailored for food delivery services. It enables fast, efficient communication between customers and support agents through live chat, intelligent order tracking, automated refund processing, and comprehensive user history management.",
-    "image": "/images/Agentic-Support-Hub.png",
-    "technologies": [
-      "MongoDB",
-      "Node.js",
-      "React.js",
-      "Express.js",
-      "TypeScript",
-      "Vite",
-      "Tailwind CSS",
-      "Vercel"
-    ],
-    "liveLink": "https://agentic-support-hub.vercel.app/",
-    "githubUrl": "https://github.com/AvusalaChetan/Agentic-Support-Hub",
-    "startDate": "2026-06",
-    "endDate": "2026-07",
-    "highlights": [
-      "AI Agent integration using Grok (GROQ SDK) with Function Calling",
-      "Real-time AI reasoning transparency",
-      "Automated refund processing based on custom business logic (45-minute rule)",
-      "Real-time communication and driver tracking using Socket.io",
-      "Full-stack implementation with React 19, TypeScript, and MongoDB"
-    ]
   }
 ]

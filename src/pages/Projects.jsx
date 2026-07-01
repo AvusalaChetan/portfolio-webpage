@@ -80,14 +80,14 @@ const ProjectCard = ({ project }) => {
           </SqureBage>
         )}
 
-        <p className="font-sans text-sm leading-relaxed text-[rgba(255,255,255,0.65)]">
+        <p className="font-sans text-sm  text-[rgba(255,255,255,0.91)]">
           {description}
         </p>
-        <ul className="flex flex-col gap-3 list-none  ">
+        <ul className="flex flex-col gap-1 list-none  ">
           {highlights.map((p, idx) => (
             <li
               key={idx}
-              className=" text-[color:var(--text)] text-sm leading-relaxed"
+              className=" text-[color:var(--text)] text-sm "
             > 
               <span className="text-(--text-muted)">{p}</span>
             </li>

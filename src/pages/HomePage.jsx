@@ -5,7 +5,7 @@ import { FaLinkedin, FaFileLines } from "react-icons/fa6"; // Standardizing prem
 
 const HomePage = () => {
   const stats = [
-    { value: "8", label: "Live Projects" },
+    // { value: "8", label: "Live Projects" },
     { value: "1", label: "npm Package", suffix: "(500+ downloads)" },
     { value: "15+", label: "Repos" },
     { value: "2026", label: "Seeking Internship", isHighlighted: true },
