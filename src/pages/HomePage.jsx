@@ -7,7 +7,7 @@ const HomePage = () => {
   const stats = [
     // { value: "8", label: "Live Projects" },
     { value: "1", label: "npm Package", suffix: "(500+ downloads)" },
-    { value: "15+", label: "Repos" },
+    { value: "4", label: "Repos" },
     { value: "2026", label: "Seeking Internship", isHighlighted: true },
   ];
 
