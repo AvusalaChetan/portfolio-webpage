@@ -24,7 +24,8 @@ const HomePage = () => {
       text: "Resume",
       icon: <FaFileLines className="text-lg" />,
       action: () => {
-        window.open('/pdf/resume.pdf')
+        // window.open('/pdf/resume.pdf')
+
       },
       className:
         "border border-[rgba(255,255,255,0.07)] text-[#FFFFFF] hover:border-[#C9922A] hover:bg-[rgba(201,146,42,0.08)] transition-all duration-200",
