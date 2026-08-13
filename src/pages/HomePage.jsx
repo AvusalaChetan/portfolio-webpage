@@ -1,7 +1,7 @@
 import Button from "../components/common/Button";
 import Bage from "../components/HomePageComponents/Bage";
 import { FaSquareGithub } from "react-icons/fa6";
-import { FaLinkedin, FaFileLines } from "react-icons/fa6"; // Standardizing premium icons
+import { FaLinkedin, FaFileLines } from "react-icons/fa6"; 
 
 const HomePage = () => {
   const stats = [

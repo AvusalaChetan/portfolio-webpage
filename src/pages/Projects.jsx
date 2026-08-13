@@ -87,7 +87,7 @@ const ProjectCard = ({ project }) => {
           {highlights.map((p, idx) => (
             <li
               key={idx}
-              className=" text-[color:var(--text)] text-sm "
+              className=" text-(--text) text-sm "
             > 
               <span className="text-(--text-muted)">{p}</span>
             </li>

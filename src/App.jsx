@@ -5,10 +5,22 @@ import Projects from "./pages/Projects";
 import Askme from "./pages/Askme";
 import Contact from "./pages/Contact";
 import Music from './components/Music'
-
+import { useEffect, useState } from "react";
+import Loading from './pages/Loading'
 
 
 const App = () => {
+
+  const [loading, setLoading] = useState(true)
+  useEffect(() => {
+  let timeOut = setTimeout(() => {
+    if(loading) setLoading(false);
+  }, 2500);
+  return ()=> clearTimeout(timeOut)
+  }, [loading])
+  
+  if(loading) return <Loading/>
+
   return (
     <main className="min-h-screen w-full flex flex-col items-center justify-start bg-(--bg-2)">
       <Navbar />

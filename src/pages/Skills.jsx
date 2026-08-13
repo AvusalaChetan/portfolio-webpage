@@ -7,6 +7,7 @@ import {
   FaPython,
   FaGitAlt,
   FaTerminal,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiTypescript,
@@ -15,25 +16,32 @@ import {
   SiSocketdotio,
   SiTailwindcss,
   SiJsonwebtokens,
+  SiRedux,
 } from "react-icons/si";
 
 const Skills = () => {
   const arrOfSkills = [
     { name: "JavaScript", icon: <FaJsSquare className="text-yellow-500" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
+    // { name: "TypeScript", icon: <SiTypescript className="text-blue-600" /> },
     {
       name: "React",
       icon: <FaReact className="text-sky-400 animate-spin-slow" />,
     },
+    {
+      name: "Redux-Toolkit",
+      icon: <SiRedux className="text-purple-400 animate-spin-slow" />,
+    },
+
     { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
     { name: "MongoDB", icon: <SiMongodb className="text-emerald-500" /> },
     { name: "Express.js", icon: <SiExpress className="text-gray-400" /> },
-    { name: "Socket.io", icon: <SiSocketdotio className="text-white" /> },
+    // { name: "Socket.io", icon: <SiSocketdotio className="text-white" /> },
     { name: "Python", icon: <FaPython className="text-blue-500" /> },
     { name: "Tailwind CSS", icon: <SiTailwindcss className="text-cyan-400" /> },
     { name: "JWT Auth", icon: <SiJsonwebtokens className="text-pink-500" /> },
     { name: "Git", icon: <FaGitAlt className="text-orange-600" /> },
-    { name: "CLI Tools", icon: <FaTerminal className="text-dark-400" /> },
+    { name: "GitHub", icon: <FaGithub className="text-black" /> },
+    // { name: "CLI Tools", icon: <FaTerminal className="text-dark-400" /> },
   ];
 
   const [skills] = useState(arrOfSkills);
