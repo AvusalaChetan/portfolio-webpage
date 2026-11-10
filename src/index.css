@@ -5,8 +5,10 @@
   --card: #ffffff;
   --border: #90969d;
   --text: #1f2328;
-  --muted: #656d76;
+ /* --muted: #4b5563; */
+ --muted: #6b7280;
   --accent: #e8743b;
+  --line:#d1d5db
 }
 
 [data-theme="dark"] {
@@ -16,6 +18,26 @@
   --text: #e6edf3;
   --muted: #8b949e;
   --accent: #f0883e;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c4c4c4 transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 6px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #c4c4c4;
+  border-radius: 9999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
 }
 
 body {
@@ -29,20 +51,17 @@ body {
   gap: 12px;
 }
 
-button{
-  cursor: pointer
+button {
+  cursor: pointer;
 }
 
 @layer components {
   .card {
-    @apply rounded-none border p-6;
+    @apply rounded-none border px-4 py-6;
     background: var(--card);
     border-color: var(--border);
-    
   }
 }
-
- 
 
 @media (max-width: 768px) {
   .layout {

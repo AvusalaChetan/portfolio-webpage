@@ -1,5 +1,5 @@
-import {createContext, useState, type JSX, type ReactNode} from "react";
-
+import {createContext, useState} from "react";
+import type {JSX, ReactNode} from "react";
 interface AppContextType {
   isLoading: boolean;
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;

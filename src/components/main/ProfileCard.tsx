@@ -1,7 +1,7 @@
 import type {IconType} from "react-icons";
 import {FaXTwitter} from "react-icons/fa6";
 import {LuGithub, LuLinkedin, LuMapPin} from "react-icons/lu";
-import ProfilePic from "../secondryComponents/ProfilePic";
+import ProfilePic from "../secondry/ProfilePic";
 
 export type ProfileLink = {
   label: string;
