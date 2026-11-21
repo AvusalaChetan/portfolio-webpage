@@ -5,7 +5,7 @@ import TabContent from "../../components/main/TabContent";
 const MainLayout = () => {
   return (
     <main className="layout min-h-screen w-full overflow-visible p-4 bg-(--bg) lg:h-screen lg:overflow-hidden">
-      <aside className="h-auto min-w-0 lg:h-full lg:min-h-0 bg-(--bg)">
+      <aside className="h-auto min-w-0 lg:h-full lg:min-h-0 bg-(--bg) ">
         <ProfileCard />
       </aside>
 

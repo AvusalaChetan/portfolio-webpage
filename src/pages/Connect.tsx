@@ -38,7 +38,7 @@ const links = [
 
 const Connect = () => {
   return (
-    <article className="mx-auto w-full max-w-[700px] px-1 py-2">
+    <article className="mx-auto w-full max-w-175 px-1 py-2">
       <Section>
         <MainHeading text="Connect" />
         <p className="text-(--muted) leading-7">

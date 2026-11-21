@@ -20,7 +20,7 @@ export const ProjectCard = ({project}: {project: ProjectCardData}) => {
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center bg-(--border) px-4 text-center">
-            <span className="text-xl font-semibold tracking-wide text-(--text) capitalize">
+            <span className="text-2xl lg:text-3xl font-semibold tracking-wide text-(--text) capitalize">
               {title}
             </span>
           </div>

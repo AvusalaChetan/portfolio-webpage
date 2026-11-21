@@ -4,7 +4,7 @@ import Section from "../components/secondry/Section";
 
 const About = () => {
   return (
-    <article className="mx-auto w-full max-w-[700px] px-1 py-2">
+    <article className="mx-auto w-full max-w-175 px-1 py-2">
       <Section>
         <MainHeading text="Introduction" />
         <p className="text-(--muted) leading-7">

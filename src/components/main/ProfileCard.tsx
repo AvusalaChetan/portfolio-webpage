@@ -10,7 +10,7 @@ export type ProfileLink = {
 
 const ProfileCard = () => {
   return (
-    <div className="card h-auto  lg:flex  flex flex-col items-center text-center gap-2 lg:gap-4 ">
+    <div className="card h-auto lg:h-full  lg:flex  flex flex-col items-center text-center gap-2 lg:gap-4  ">
       <div className="hidden lg:flex ">
         <ProfilePic />
       </div>
