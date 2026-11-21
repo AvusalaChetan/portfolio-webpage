@@ -1,43 +1,55 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f6f8fa;
-  --card: #ffffff;
-  --border: #90969d;
-  --text: #1f2328;
- /* --muted: #4b5563; */
- --muted: #6b7280;
-  --accent: #e8743b;
-  --line:#d1d5db
+  --bg: #ffffff;
+  --card: #f4f4f5;
+  /* icon boxes, pills */
+  --border: #e4e4e7;
+  /* grid lines */
+  --hatch: #e4e4e7;
+  /* hatch strokes */
+  --text: #09090b;
+  --muted: #52525b;
+  --accent: #1d9bf0;
+  /* verified-badge blue */
+  --accent-fg: #ffffff;
 }
 
 [data-theme="dark"] {
-  --bg: #0d1117;
-  --card: #161b22;
-  --border: #30363d;
-  --text: #e6edf3;
-  --muted: #8b949e;
-  --accent: #f0883e;
+  --bg: #000000;
+  --card: #18181b;
+  --border: #27272a;
+  --hatch: #27272a;
+  --text: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #1d9bf0;
+  --accent-fg: #ffffff;
 }
+
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #c4c4c4 transparent;
+  scrollbar-color: var(--border) transparent;
 }
 
 *::-webkit-scrollbar {
   width: 3px;
   height: 6px;
 }
+
 *::-webkit-scrollbar-track {
   background: transparent;
 }
+
 *::-webkit-scrollbar-thumb {
-  background: #c4c4c4;
+  background: var(--border);
   border-radius: 9999px;
 }
+
 *::-webkit-scrollbar-thumb:hover {
-  background: #a3a3a3;
+  background: var(--muted);
 }
 
 body {
@@ -45,10 +57,26 @@ body {
   color: var(--text);
 }
 
+.hatch-divider {
+  height: 40px;
+  border-block: 1px solid var(--border);
+  background-image: repeating-linear-gradient(-45deg,
+      transparent 0 5px,
+      var(--hatch) 5px 6px);
+}
+
 .layout {
-  display: grid;
-  grid-template-columns: clamp(260px, 30%, 400px) 1fr;
-  gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    height: 100vh;
+  }
 }
 
 button {
@@ -60,11 +88,5 @@ button {
     @apply rounded-none border px-4 py-6;
     background: var(--card);
     border-color: var(--border);
-  }
-}
-
-@media (max-width: 768px) {
-  .layout {
-    grid-template-columns: 1fr;
   }
 }

@@ -45,3 +45,5 @@ export interface TechGroup {
   heading: string;
   items: string[];
 }
+
+export type themeTypes = 'light' | 'dark' 

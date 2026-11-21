@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Watchly",
     description:
       "Video streaming platform with JWT auth, refresh tokens, Cloudinary uploads and infinite-scroll video list.",
-    image: "https://imgs.search.brave.com/VQK6LZPMqa450iYRZqXXvQRZX5IzNQ-O6xhbu2FoYaA/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/aW1nbG9iYWwuY29t/L2ltYWdlcy9saWJy/YXJ5L3RoZS1pbWct/YWR2YW50YWdlLS0t/c3ZnLWdyYXBoaWNz/L2ltZy1hZHYtLTE4/LWxhbmd1YWdlcy1z/cG9rZW4taW4taG91/c2Uuc3Zn",
+    image: "/img/watchly.png",
     tech: [
       "TypeScript",
       "React",
@@ -17,8 +17,8 @@ export const projects: Project[] = [
       "MongoDB",
       "Cloudinary",
     ],
-    githubUrl: "",
-    liveUrl: "",
+    githubUrl: "https://github.com/AvusalaChetan/watchly",
+    liveUrl: "https://watchly-nine-beta.vercel.app/home",
     category: "fullstack",
     status: "in-progress",
     featured: false,
@@ -28,7 +28,7 @@ export const projects: Project[] = [
     title: "express-jetstart",
     description:
       "Open-source NPM CLI that scaffolds Express projects: TypeScript or JavaScript, ESM or CommonJS, database helpers, view engines and auto config.",
-    image: "https://imgs.search.brave.com/VQK6LZPMqa450iYRZqXXvQRZX5IzNQ-O6xhbu2FoYaA/rs:fit:0:180:1:0/g:ce/aHR0cHM6Ly93d3cu/aW1nbG9iYWwuY29t/L2ltYWdlcy9saWJy/YXJ5L3RoZS1pbWct/YWR2YW50YWdlLS0t/c3ZnLWdyYXBoaWNz/L2ltZy1hZHYtLTE4/LWxhbmd1YWdlcy1z/cG9rZW4taW4taG91/c2Uuc3Zn",
+    image: "",
     tech: ["TypeScript", "Node", "Express", "MongoDB", "PostgreSQL", "MySQL"],
     githubUrl: "https://github.com/AvusalaChetan/express-jetstart-CLI",
     liveUrl: "https://www.npmjs.com/package/express-jetstart",

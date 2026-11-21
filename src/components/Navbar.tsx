@@ -1,6 +1,7 @@
-import {NavLink} from "react-router";
-import type {Navigation} from "../types/index";
-import {RiContrast2Line} from "react-icons/ri";
+import { RiContrast2Line } from "react-icons/ri";
+import { NavLink } from "react-router";
+import { useTheme } from "../hooks/useTheme";
+import type { Navigation } from "../types/index";
 
 const Navbar = () => {
   const navigation: Navigation[] = [
@@ -12,7 +13,9 @@ const Navbar = () => {
     {title: "ask me", to: "/ai"},
   ];
 
-  return (
+  const {setTheme} = useTheme();
+
+   return (
     <div className="card  flex items-center justify-between gap-6 overflow-x-auto py-0! px-4!">
       <nav className=" flex gap-6 ">
         {navigation.map((n: Navigation) => (
@@ -32,7 +35,10 @@ const Navbar = () => {
           </NavLink>
         ))}
       </nav>
-      <button className="cursor-pointer">
+      <button
+        className="cursor-pointer"
+        onClick={() => setTheme((p) => (p === "light" ? "dark" : "light"))}
+      >
         <RiContrast2Line size={18} />
       </button>
     </div>

@@ -101,8 +101,8 @@ const Overview = () => {
         <MainHeading text="Tech stack" />
         <div className="flex flex-col gap-4">
           {techStack.map((group) => (
-            <div key={group.heading}>
-              <SubHeading text={group.heading} />
+            <div key={group.heading} className="flex  items-center justify-start gap-1">
+              <SubHeading text={group.heading} />: 
               <div className="flex flex-wrap gap-2 ">
                 {group.items.map((item) => (
                   <Tag key={item} text={item} />
