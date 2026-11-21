@@ -1,18 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #ffffff;
-  --card: #f4f4f5;
-  /* icon boxes, pills */
-  --border: #e4e4e7;
-  /* grid lines */
-  --hatch: #e4e4e7;
-  /* hatch strokes */
-  --text: #09090b;
-  --muted: #52525b;
-  --accent: #1d9bf0;
-  /* verified-badge blue */
-  --accent-fg: #ffffff;
+--bg: #111827
+--card: #111827
+--border: #1f2937
+--hatch: #1f2937
+--text: #f9fafb
+--muted: #9ca3af
+--accent: #60a5fa
 }
 
 [data-theme="dark"] {
@@ -22,7 +17,7 @@
   --hatch: #27272a;
   --text: #fafafa;
   --muted: #a1a1aa;
-  --accent: #1d9bf0;
+  --accent: #5d676e;
   --accent-fg: #ffffff;
 }
 
@@ -86,7 +81,7 @@ button {
 @layer components {
   .card {
     @apply rounded-none border px-4 py-6;
-    background: var(--card);
+    background: var(--bg);
     border-color: var(--border);
   }
 }

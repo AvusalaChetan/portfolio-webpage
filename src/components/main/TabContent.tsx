@@ -2,7 +2,7 @@ import { Outlet } from "react-router"
 
 const TabContent = () => {
   return (
-    <div className="card h-full overflow-y-scroll"><Outlet/></div>
+    <div className="card h-auto lg:h-full lg:overflow-y-scroll"><Outlet/></div>
   )
 }
 

@@ -7,10 +7,12 @@ import {Tag} from "../components/secondry/Tag";
 import {achievements} from "../data/achieviements";
 import {currentProject} from "../data/currentProject";
 import {projects} from "../data/projects";
-import {techStack} from "../data/techStack";
+import {techStack} from "../data/skills";
+import {useTheme} from "../hooks/useTheme";
 
 const Overview = () => {
   const majorProjects = ["express-jetstart", "watchly"];
+  const {theme} = useTheme();
 
   return (
     <div className="h-full w-full">
@@ -24,7 +26,7 @@ const Overview = () => {
       <Section>
         <MainHeading text="Currently building" />
         <SubHeading text={currentProject.title} />
-        <p className="text-gray-600 mb-3">{currentProject.description}</p>
+        <p className="text-(--muted) mb-3">{currentProject.description}</p>
         <div className="flex flex-wrap gap-2">
           {currentProject.tech.map((tech) => (
             <Tag key={tech} text={tech} />
@@ -51,7 +53,7 @@ const Overview = () => {
                 {a.items.map((item) => (
                   <div
                     key={item.id}
-                    className="border border-gray-300 bg-white p-3 transition-colors hover:border-gray-500"
+                    className="border border-(--border) bg-(--card) p-3 transition-colors hover:border-(--muted)"
                   >
                     <div className="flex items-start justify-between gap-2">
                       <h4 className="text-base font-semibold">{item.title}</h4>
@@ -61,16 +63,16 @@ const Overview = () => {
                           target="_blank"
                           rel="noreferrer"
                           aria-label={`Open ${item.title}`}
-                          className="shrink-0 border border-gray-300 p-1.5 hover:bg-gray-100"
+                          className="shrink-0 border border-(--border) p-1.5 hover:bg-(--bg)"
                         >
                           <LuExternalLink />
                         </a>
                       )}
                     </div>
                     {item.date && (
-                      <span className="text-xs text-gray-500">{item.date}</span>
+                      <span className="text-xs text-(--muted)">{item.date}</span>
                     )}
-                    <p className="mt-1 text-sm text-gray-600">
+                    <p className="mt-1 text-sm text-(--muted)">
                       {item.description}
                     </p>
                   </div>
@@ -84,17 +86,20 @@ const Overview = () => {
         <MainHeading text="Coding stats" />
 
         <div className="flex flex-col gap-4  items-start justify-center">
-          <div className="overflow-x-auto border border-(--line) p-2">
-            <GitHubCalendar username="AvusalaChetan" colorScheme="light" />
+          <div className="overflow-x-scroll border border-(--border) p-2 w-full">
+            <GitHubCalendar username="AvusalaChetan" 
+            colorScheme={theme} />
           </div>
+
           <div>
             <img
-              src="https://streak-stats.demolab.com/?user=AvusalaChetan&theme=dark"
+              src={`https://streak-stats.demolab.com/?user=AvusalaChetan&theme=${theme}`}
               alt="GitHub streak"
               loading="lazy"
               className="w-full max-w-md"
             />
           </div>
+
         </div>
       </Section>
       <Section>

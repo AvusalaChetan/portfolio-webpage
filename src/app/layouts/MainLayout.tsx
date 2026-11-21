@@ -4,14 +4,14 @@ import TabContent from "../../components/main/TabContent";
 
 const MainLayout = () => {
   return (
-    <main className="layout p-4 bg-gray-400/40 h-screen w-full overflow-hidden">
-      <aside className="h-full min-h-0 min-w-0">
+    <main className="layout min-h-screen w-full overflow-visible p-4 bg-(--bg) lg:h-screen lg:overflow-hidden">
+      <aside className="h-auto min-w-0 lg:h-full lg:min-h-0 bg-(--bg)">
         <ProfileCard />
       </aside>
 
-      <section className="h-full min-h-0 min-w-0 flex flex-col gap-2">
+      <section className="min-w-0 flex flex-col gap-2 lg:h-full lg:min-h-0">
         <Navbar />
-        <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden bg-white border border-gray-400">
+        <div className="overflow-x-hidden border border-(--border) bg-(--bg) lg:min-h-0 lg:flex-1 lg:overflow-y-auto">
           <TabContent />
         </div>
       </section>

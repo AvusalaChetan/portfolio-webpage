@@ -9,7 +9,7 @@ export const MainHeading = ({text, className = ""}: HeadingProps) => {
       <h2 className="capitalize font-semibold text-xl tracking-wide pb-2">
         {text}
       </h2>
-      <hr className="border-gray-300" />
+      <hr className="border-(--border)" />
     </div>
   );
 };
