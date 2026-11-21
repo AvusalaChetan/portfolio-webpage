@@ -1,7 +1,11 @@
 
 const AskMe = () => {
   return (
-    <div>AskMe</div>
+    <div className="h-full">
+      <iframe src="https://ai-assistant-portfolio-chi.vercel.app/" 
+      className="w-full h-full "
+      />
+    </div>
   )
 }
 
